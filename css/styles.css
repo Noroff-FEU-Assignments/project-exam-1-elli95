@@ -1,3 +1,5 @@
+@import "variables.css";
+
 *, *:before, *:after {
     box-sizing: inherit;
 }
@@ -15,12 +17,11 @@ header {
     top: 0px;
     width: 100%;
     align-items: center;
-    background-color: #BF9169;
+    background-color: var(--menu-standar-color);
     padding: 5px 10px;
 }
 
 .logo {
-    /* padding-left: 20px; */
     font-family: 'Dancing Script', cursive;
 }
 
@@ -34,8 +35,7 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 10px 0px 20px 0px;
-    background-color: #BF9169;  
-    font-family: 'Sriracha', cursive;
+    background-color: var(--menu-standar-color);  
 }
 
 footer label {
@@ -62,25 +62,30 @@ footer input {
 }
 
 /* nav */
-
-.nav-section {
-    bottom: 0px;
-    /* padding: 10px 0px 10px 0px; */
-    background-color: #BF9169;
-    padding: 10px;
-    font-size: 2rem;
+footer,
+nav,
+.search form,
+.searchbar-input {
+    font-family: 'Sriracha', cursive;
 }
 
-
-#dropdown-menu {
+nav,
+#dropdown-menu,
+#dropdown-searchbar,
+.search form {
     display: none;
+}
+
+.nav-section {
+    background-color: var(--menu-standar-color);
+    padding: 10px;
+    font-size: 2rem;
 }
 
 #dropdown-menu:checked ~ nav {
     display: table;
     justify-content: center;
-    /* border-radius: 10px; */
-    background-color: #F4D5B4;
+    background-color: var(--menu-dropdown-color);
     position: absolute;
     top: 68px;
     left: 0px;
@@ -90,17 +95,13 @@ footer input {
 }
 
 nav {
-    display: none;
-    /* gap: 25px; */
     padding: 0px 30px;
     font-size: 1.5rem;
-    font-family: 'Sriracha', cursive;
 }
 
 nav a {
-    padding: 10px 16px;
-    /* border: solid 1px black; */
     display: flex;
+    padding: 10px 16px;
     flex-direction: row;
     justify-content: center;
 }
@@ -108,7 +109,6 @@ nav a {
 /* Searchbar */
 
 .search {
-    /* padding-right: 20px;*/
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -117,20 +117,10 @@ nav a {
     font-size: 1.6rem;
 }
 
-#dropdown-searchbar {
-    display: none;
-}
-
-.search form {
-    display: none;
-    font-family: 'Sriracha', cursive;
-}
-
 #dropdown-searchbar:checked ~ form {
     display: flex;
     justify-content: center;
-    /* border-radius: 10px; */
-    background-color: #F4D5B4;
+    background-color: var(--menu-dropdown-color);
     position: absolute;
     top: 68px;
     left: 0px;
@@ -140,7 +130,6 @@ nav a {
 } 
 
 .searchbar-input {
-    font-family: 'Sriracha', cursive;
     border-radius: 5px;
     width: 65%;
     font-size: 1rem;
