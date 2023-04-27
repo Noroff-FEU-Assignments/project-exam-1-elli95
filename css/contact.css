@@ -1,0 +1,47 @@
+.contact,
+.contact-form,
+.contact-form h1,
+form,
+.form-style,
+.contact-btn {
+    display: grid;
+    justify-content: center;
+}
+
+.contact-form{
+    padding: 20px;
+}
+
+.contact img {
+    display: none;
+}
+
+.contact-form h1 {
+    font-size: 1.7rem;
+}
+
+.contact-form h2 {
+    font-size: 1.3rem;
+    font-weight: normal;
+    margin-top: 0px;
+}
+
+.form-style{
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    font-size: 1.2rem;
+}
+
+.form-style input, 
+textarea{
+    border-radius: 3px;
+}
+
+.contact-btn-style {
+    padding: 5px 20px;
+    margin-top: 15px;
+}
+
+.error-message-style {
+    display: none;
+}

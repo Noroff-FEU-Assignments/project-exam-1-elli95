@@ -3,6 +3,10 @@
 *, *:before, *:after {
     box-sizing: inherit;
 }
+
+img {
+    width: 100%;
+}
   
 body {
     box-sizing: border-box;
@@ -51,6 +55,10 @@ footer input {
     font-size: 1.2rem;
     border-radius: 5px;
     padding: 7px 10px;
+}
+
+.main-content {
+    padding-top: 65px;
 }
 
 /* reference: https://blog.pope.tech/2020/02/28/missing-form-label-search/ */

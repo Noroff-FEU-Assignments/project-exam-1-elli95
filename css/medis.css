@@ -1,6 +1,7 @@
 @media (min-width: 800px){
     header {
         display: flex;
+        position: unset;
         padding: 0px 19px;
     }
     
@@ -30,6 +31,10 @@
     .search form {
         display: contents;
     }
+
+    .main-content {
+        padding-top: 0px;
+    }
 }
 
 @media (min-width: 1000px) {
@@ -53,6 +58,15 @@
     .sign-up-btn {
         font-size: 1.2rem;
         padding: 7px 20px;
+    }
+
+    /* Contact */
+    .contact {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact img {
+        display: unset;
     }
 }
 
