@@ -5,3 +5,106 @@
     color: white;
     padding: 50px 80px;
 }
+
+.introduction {
+    display: grid;
+    justify-items: center;
+    padding-top: 50px;
+}
+
+.introduction-text-style {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 49%;
+    left: 37%;
+    background-color: #0000002b;
+    color: white;
+    padding: 0px 15px;
+}
+
+.introduction h1 { 
+    font-size: 3.4rem;
+    margin: 0px;
+    padding: 15px;
+}
+
+.introduction h2 {  
+    font-size: 2.5rem;
+    max-width: 605px;
+    font-weight: normal;
+    margin: 0px;
+    padding: 15px;
+}
+
+.introduction-img {  
+    border: solid 35px white;
+    border-radius: 10px;
+    max-width: 60%;
+}
+
+.blog-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 50px 100px;  
+}
+
+.arrow-style {
+    font-size: 3rem;
+}
+
+.blog-entry {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    background-color: white;
+    border: solid 3px black;
+    border-radius: 10px;
+    width: min-content;
+}
+
+.blog-entry img {
+    width: 400px;
+    padding: 10px;
+}
+
+.blog-entry h2 {
+    margin: 0px;
+    padding: 0px 0px 10px 20px;
+}
+
+.blog-entry p {
+    margin: 0px;
+    text-align: end;
+    padding: 3px 15px 5px 0px;
+}
+
+
+.meal-info,
+.featured-meal img {
+    display: flex;
+    justify-self: center;
+}
+
+.meal-info {
+    max-width: 500px;
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+}
+
+.featured-meal img {
+    max-width: 600px;
+    display: flex;
+    justify-self: center;
+}
+
+.popular-section {
+    display: grid;
+    justify-content: center;
+    padding: 20px 0px 40px 0px;
+}
+
+.main-content{
+    background-color: #F4D5B4;
+}
