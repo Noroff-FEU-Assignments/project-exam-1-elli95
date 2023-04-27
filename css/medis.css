@@ -1,0 +1,28 @@
+@media (min-width: 800px){
+    header {
+        display: flex;
+    }
+    
+    .menu-button {
+        display: none;
+    }
+
+    nav,
+    #dropdown-menu:checked ~ nav {
+        display: flex;
+    }
+
+    #dropdown-menu:checked ~ nav {
+        display: flex;
+        background-color: unset;
+        position: unset;
+    }
+
+    #dropdown-searchbar:checked ~ form {
+        top: 90px;
+    }
+
+    .search form {
+        display: contents;
+    }
+}

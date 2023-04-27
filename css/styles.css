@@ -1,0 +1,158 @@
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+  
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+header {
+    display: grid;
+    grid-template-areas: "b a c";
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    align-items: center;
+    background-color: #BF9169;
+    padding: 5px 10px;
+}
+
+.logo {
+    /* padding-left: 20px; */
+    font-family: 'Dancing Script', cursive;
+}
+
+.logo h2 {
+    margin: 5px;
+    font-size: 1.9rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px 90px 0px;
+    background-color: #BF9169;  
+    font-family: 'Sriracha', cursive;
+}
+
+footer label {
+    font-size: 1.4rem;
+}
+
+footer input {
+    margin: 5px;
+}
+
+/* nav */
+
+.nav-section {
+    bottom: 0px;
+    /* padding: 10px 0px 10px 0px; */
+    background-color: #BF9169;
+    padding: 10px;
+    font-size: 2rem;
+}
+
+
+#dropdown-menu {
+    display: none;
+}
+
+#dropdown-menu:checked ~ nav {
+    display: table;
+    justify-content: center;
+    /* border-radius: 10px; */
+    background-color: #F4D5B4;
+    position: absolute;
+    top: 68px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+}
+
+nav {
+    display: none;
+    /* gap: 25px; */
+    padding: 0px 30px;
+    font-size: 1.5rem;
+    font-family: 'Sriracha', cursive;
+}
+
+nav a {
+    padding: 10px 16px;
+    /* border: solid 1px black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Searchbar */
+
+.search {
+    /* padding-right: 20px;*/
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 5px 10px 10px;
+    font-size: 1.6rem;
+}
+
+#dropdown-searchbar {
+    display: none;
+}
+
+.search form {
+    display: none;
+    font-family: 'Sriracha', cursive;
+}
+
+#dropdown-searchbar:checked ~ form {
+    display: flex;
+    justify-content: center;
+    /* border-radius: 10px; */
+    background-color: #F4D5B4;
+    position: absolute;
+    top: 68px;
+    left: 0px;
+    width: 100%;
+    z-index: 4;
+    padding: 10px;
+} 
+
+.searchbar-input {
+    font-family: 'Sriracha', cursive;
+    border-radius: 5px;
+    width: 65%;
+    font-size: 1rem;
+    padding-left: 7px;
+}
+
+
+/* Font edits: */
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Grid area */
+.grid-a {
+    grid-area: a;
+}
+
+.grid-b {
+    grid-area: b;
+}
+
+.grid-c {
+    grid-area: c;
+}
