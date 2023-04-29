@@ -24,6 +24,12 @@ form,
     font-size: 1.3rem;
     font-weight: normal;
     margin-top: 0px;
+    width: 335px;
+}
+
+form,
+.contact-btn-style {
+    font-weight: bold;
 }
 
 .form-style{
@@ -40,6 +46,7 @@ textarea{
 .contact-btn-style {
     padding: 5px 20px;
     margin-top: 15px;
+    text-transform: uppercase;
 }
 
 .error-message-style {

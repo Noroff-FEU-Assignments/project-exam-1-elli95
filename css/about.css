@@ -1,0 +1,37 @@
+.about-content{
+    display: grid;
+    justify-items: center;
+    padding-bottom: 30px;
+}
+
+.about-img-text-combo-style,
+.profile-img-border {
+    justify-items: center;
+    display: grid;
+}
+
+/* Reference: How to add border in my clip-path: polygon(); CSS style - Reply from: Robert Máslo - https://stackoverflow.com/questions/31854185/how-to-add-border-in-my-clip-path-polygon-css-style */
+.profile-img-border {
+  filter:   drop-shadow(2px 0px 0px white)
+            drop-shadow(-2px 0px 0px white)
+            drop-shadow(0px 2px 0px white)
+            drop-shadow(0px -2px 0px white)
+            drop-shadow(2px 2px 0px white)
+            drop-shadow(-2px -2px 0px white)
+            drop-shadow(-2px 2px 0px white)
+            drop-shadow(2px -2px 0px white);
+}
+
+.profile-img {
+    max-width: 55%;
+    border-radius: 20%; 
+}
+
+.decore-img {
+    display: none;
+}
+
+.about-content h2 {
+    padding: 15px 35px;
+    margin: 0px;
+}

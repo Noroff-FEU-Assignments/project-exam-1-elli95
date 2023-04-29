@@ -23,6 +23,7 @@ header {
     align-items: center;
     background-color: var(--menu-standar-color);
     padding: 5px 10px;
+    z-index: 5;
 }
 
 .logo {
@@ -59,6 +60,12 @@ footer input {
 
 .main-content {
     padding-top: 65px;
+    background-color: #F4D5B4;
+    font-family: 'Comic Neue', cursive;
+}
+
+.main-content h2 {
+    font-weight: normal;
 }
 
 /* reference: https://blog.pope.tech/2020/02/28/missing-form-label-search/ */
@@ -154,6 +161,10 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 /* Grid area */
