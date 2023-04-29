@@ -1,0 +1,33 @@
+.blog-section {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 50px 100px;  
+}
+
+.blog-entry {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    background-color: white;
+    border: solid 3px black;
+    border-radius: 10px;
+    width: min-content;
+}
+
+.blog-entry img {
+    width: 400px;
+    padding: 10px;
+}
+
+.blog-entry h2 {
+    margin: 0px;
+    padding: 0px 0px 10px 20px;
+}
+
+.blog-entry p {
+    margin: 0px;
+    text-align: end;
+    padding: 3px 15px 5px 0px;
+}
