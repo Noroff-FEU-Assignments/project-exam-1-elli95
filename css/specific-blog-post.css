@@ -53,3 +53,7 @@
 .comment-form textarea {
     border-radius: 3px;
 }
+
+.comment-underline {
+    border-bottom: solid 1px black;
+}
