@@ -179,3 +179,7 @@ a:hover {
 .grid-c {
     grid-area: c;
 }
+
+.grid-d {
+    grid-area: d;
+}

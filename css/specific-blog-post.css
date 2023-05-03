@@ -1,0 +1,55 @@
+.specific-blog-post-content,
+.comment-form div {
+    display: grid;
+}
+
+.specific-blog-post-content {
+    justify-items: center;
+    padding: 10px 5%;
+}
+
+.specific-blog-post-content h1{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.specific-blog-post-content img {
+    max-width: 90%;
+    border-radius: 10px;
+}
+
+.date {
+    justify-self: end;
+    padding-right: 6%;
+}
+
+.post-style {
+    font-size: 1.4rem;
+}
+
+.description-ingredients {
+    display: grid;
+    grid-template-areas:
+    "a" 
+    "b";
+    justify-items: center;
+}
+
+.description-ingredients,
+.recipe-steps {
+    max-width: 1000px;
+}
+
+.comment-form div {
+    grid-template-columns: 1fr;
+    font-size: 1.2rem;
+}
+
+.comment-form label {
+    font-size: 1.3rem;
+}
+
+.comment-form input,
+.comment-form textarea {
+    border-radius: 3px;
+}

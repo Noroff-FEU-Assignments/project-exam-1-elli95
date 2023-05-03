@@ -13,13 +13,7 @@
 }
 
 .introduction-text-style {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 49%;
-    left: 37%;
-    background-color: #0000002b;
-    color: white;
-    padding: 0px 15px;
+    display: none;
 }
 
 .introduction h1 { 
@@ -42,8 +36,11 @@
     max-width: 60%;
 }
 
-.blog-section {
-    display: flex;
+.blog-carousel-section {
+    display: grid;
+    grid-template-areas:
+    "a b d" 
+    "c c c";
     justify-content: center;
     align-items: center;
     gap: 30px;
@@ -51,7 +48,9 @@
 }
 
 .arrow-style {
-    font-size: 3rem;
+    display: none;
+    /* font-size: 3rem;
+    cursor: pointer; */
 }
 
 .blog-entry {
@@ -64,7 +63,8 @@
 }
 
 .blog-entry img {
-    width: 400px;
+    /* width: 400px; */
+    width: 300px;
     padding: 10px;
 }
 
@@ -79,6 +79,42 @@
     padding: 3px 15px 5px 0px;
 }
 
+.carusel-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 1690px; */
+}
+
+.carousel-nav-symbols-row{
+    display: none;
+    /* display: flex;
+    justify-content: center;
+    gap: 10px; */
+}
+
+.carousel-nav-symbols{
+    display: block;
+    background-color: gray;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.read-more {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: gray;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 157px;
+    align-self: center;
+    text-transform: uppercase;
+}
 
 .meal-info,
 .featured-meal img {
