@@ -43,8 +43,8 @@
 .blog-carousel-section {
     display: grid;
     grid-template-areas:
-    "a b d" 
-    "c c c";
+    "b" 
+    "e";
     justify-content: center;
     align-items: center;
     gap: 30px;
@@ -64,6 +64,7 @@
     border: solid 3px black;
     border-radius: 10px;
     width: min-content;
+    margin: 0px 7px;
 }
 
 .blog-entry img {
@@ -87,6 +88,8 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    flex-flow: wrap;
+    justify-content: center;
     /* overflow-x: auto;
     scroll-behavior: smooth;
     width: 1690px; */
@@ -101,11 +104,14 @@
 
 .carousel-nav-symbols{
     display: block;
-    background-color: gray;
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    cursor: pointer;
+}
+
+.carousel-nav-selected {
+    background-color: lightgray;
+    border: solid 1px black;
 }
 
 .read-more {
@@ -116,7 +122,7 @@
     padding: 10px 20px;
     border-radius: 10px;
     width: 157px;
-    align-self: center;
+    justify-self: center;
     text-transform: uppercase;
 }
 

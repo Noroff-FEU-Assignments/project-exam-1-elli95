@@ -6,6 +6,11 @@
     .blog-list-content h1 {
         font-size: 2rem;
     }
+
+    .carusel-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (min-width: 800px){
@@ -44,6 +49,40 @@
 
     .main-content {
         padding-top: 0px;
+    }
+
+    /* index */
+    .arrow-style {
+        display: flex;
+        font-size: 3rem;
+        cursor: pointer;
+    }
+
+    .blog-carousel-section {
+        grid-template-areas:
+        "a b d" 
+        "c c c";
+    }
+
+    .carusel-content {
+        display: flex;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        width: 640px;
+        /* flex-direction: row; */
+        gap: 0px;
+        flex-flow: initial;
+        justify-content: initial;
+    }
+
+    .carousel-nav-symbols-row {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .read-more {
+        display: none;
     }
 
     /*specific blog list */
@@ -167,9 +206,21 @@
     }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1100px) {
+    .carusel-content {
+        width: 960px;
+    }
+}
+
+/* @media (min-width: 1300px) {
     .blog-entry img {
         width: 400px;
+    }
+} */
+
+@media (min-width: 1400px) {
+    .carusel-content {
+        width: 1280px;
     }
 }
 
@@ -203,7 +254,7 @@
 
 
 
-@media (min-width: 2000px) {
+@media (min-width: 1850px) {
     /* Index */
     .introduction-text-style {
         display: block;
@@ -215,4 +266,45 @@
         color: white;
         padding: 0px 15px;
     }
+/* 
+    .arrow-style {
+        display: flex;
+        font-size: 3rem;
+        cursor: pointer;
+    }
+
+    .blog-carousel-section {
+        grid-template-areas:
+        "a b d" 
+        "c c c";
+    } */
+
+    
+    .carusel-content {
+        /* flex-direction: row; */
+        /* overflow-x: hidden;
+        scroll-behavior: smooth; */
+        width: 1690px;
+        /* gap: 0px;
+        flex-flow: initial;
+        justify-content: initial; */
+    }
+
+    .blog-entry {
+        margin: 0px 8.5px;
+    }
+    
+    .blog-entry img {
+        width: 400px;
+    }
+/* 
+    .carousel-nav-symbols-row {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .read-more {
+        display: none;
+    } */
 }

@@ -183,3 +183,7 @@ a:hover {
 .grid-d {
     grid-area: d;
 }
+
+.grid-e {
+    grid-area: e;
+}
