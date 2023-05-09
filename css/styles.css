@@ -35,6 +35,17 @@ header {
     font-size: 1.9rem;
 }
 
+.search-list-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    background-color: var(--menu-dropdown-color);
+}
+
 footer {
     display: flex;
     flex-direction: column;

@@ -12,8 +12,9 @@
 
 
 .blog-filter {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
     font-size: 1.2rem;
 }

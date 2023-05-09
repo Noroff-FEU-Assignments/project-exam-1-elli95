@@ -1,9 +1,11 @@
 .specific-blog-post-content,
+.blog-post-content,
 .comment-form div {
     display: grid;
 }
 
-.specific-blog-post-content {
+.specific-blog-post-content,
+.blog-post-content {
     justify-items: center;
     padding: 10px 5%;
 }
@@ -29,16 +31,41 @@
 
 .description-ingredients {
     display: grid;
+    justify-items: center;
+    padding: 20px 0px 50px 0px;
     grid-template-areas:
     "a" 
-    "b";
-    justify-items: center;
+    "b" 
+    "c";
+    grid-gap: 30px;
 }
 
-.description-ingredients,
-.recipe-steps {
+.description-ingredients h2{
+    font-size: 1.4rem;
+    margin: 0px;
+    grid-area: a;
+}
+
+.wp-block-table {
+    border: solid 1px black;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin: 0px;
+    grid-area: b;
+}
+
+.description-ingredients ol{
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0px;
+    grid-area: c;
+}
+
+.description-ingredients {
     max-width: 1000px;
 }
+
 
 .comment-form div {
     grid-template-columns: 1fr;

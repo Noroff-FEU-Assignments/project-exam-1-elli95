@@ -92,7 +92,7 @@
 
     .description-ingredients {
         grid-template-areas:
-        "b a";
+        "b a"  "c c" ;
         grid-gap: 10%;
     }
 
@@ -170,6 +170,23 @@
     /* blog list */
     .blog-section {
         grid-template-columns: repeat(3, auto);
+    }
+
+    /* specific blog post */
+    .blog-post-content {
+        padding: 50px 5%;
+    }
+
+    .description-ingredients h2 {
+        font-size: 1.6rem;
+    }
+      
+    .description-ingredients ol {
+        font-size: 1.5rem;
+    }
+      
+    .wp-block-table {
+        font-size: 1.2rem;
     }
 
     /* Contact */
