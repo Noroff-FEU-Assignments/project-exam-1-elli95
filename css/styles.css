@@ -162,6 +162,28 @@ nav a {
     padding-left: 7px;
 }
 
+/* validation styles */
+.error-message-style {
+    display: none;
+    text-align: center;
+}
+
+.error-message-style,
+.submission-fail{
+    color: red;
+}
+
+.submission-success{
+    color: #0d6a0d;
+}
+
+.submission-success,
+.submission-fail{
+    text-align: center;
+    width: 300px;
+    padding-top: 20px;
+    font-size: 1.3rem;
+}
 
 /* Font edits: */
 

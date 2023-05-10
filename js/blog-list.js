@@ -2,7 +2,7 @@ import {
     apiBase,
     postBace,
     postEndpoint,
-    mediaEndpoint } from "/js/source.js";
+    embeddedBase } from "/js/source.js";
 
 // const apiBase = "https://thecozycookingpot.elisemariehogsnes.no";
 // const postBace = "/wp-json";
@@ -15,9 +15,9 @@ const pageContent = document.querySelector(".blog-section");
 
 async function FetchApi(){
     try{
-        const response = await fetch(apiBase + postBace + postEndpoint + mediaEndpoint);
+        const response = await fetch(apiBase + postBace + postEndpoint + embeddedBase);
         const data = await response.json();
-        // console.log("url info", data);
+        console.log("url info", data);
         return data;
     }
     catch (error) {
@@ -26,20 +26,6 @@ async function FetchApi(){
     }
 }
 FetchApi();
-
-// async function FetchImgApi(){
-//     try{
-//         const response = await fetch(apiImgBase);
-//         const data = await response.json();
-//         console.log("img url info", data);
-//         return data;
-//     }
-//     catch (error) {
-//         console.log(error);
-//         pageContent.innerHTML = error;
-//     }
-// }
-// FetchImgApi();
 
 async function contentInfo(){
     const apiData = await FetchApi();
@@ -60,5 +46,5 @@ async function contentInfo(){
 }
 contentInfo();
 
-// <img src="${postData._links['wp:featuredmedia'][0].alt_text}" alt="${postData._links['wp:featuredmedia'][0]}" />
 
+const ViewMoreBtn = document.querySelector("#view-more-btn");

@@ -2,7 +2,7 @@ import {
     apiBase,
     postBace,
     postEndpoint,
-    mediaEndpoint } from "/js/source.js";
+    embeddedBase } from "/js/source.js";
 
 const pageContent = document.querySelector(".blog-post-content");
 
@@ -10,7 +10,7 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const productId = params.get("id");
 
-const blogPostBase = apiBase + postBace + postEndpoint + productId + mediaEndpoint ;
+const blogPostBase = apiBase + postBace + postEndpoint + productId + embeddedBase ;
 
 // console.log("url info123123123", blogPostBase);
 

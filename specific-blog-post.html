@@ -91,20 +91,31 @@
         </section>
         <section>
           <h2>Add a comment</h2>
-          <section class="comment-form">
-            <div class="form-style">
-              <label for="name">Name</label>
-              <input type="text" name="name" id="name" />
+          <form method="post" class="comment-form">
+            <div>
+              <div id="error-message"></div>
+              <div class="form-style">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" />
+                <p class="error-message-style" id="error-name">Please enter a name.</p>
+              </div>
+              <div class="form-style">
+                <label for="email">Email address</label>
+                <input type="text" name="email" id="email" />
+                <p class="error-message-style" id="error-email">Please enter a valid email.</p>
+              </div>
+              <div class="form-style">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="30" rows="3"></textarea>
+                <p class="error-message-style" id="error-message-field">Please enter a message.</p>
+              </div>
+              <div id="comment-submission-message"></div>
             </div>
-            <div class="form-style">
-              <label for="email">Email address</label>
-              <input type="text" name="email" id="email" />
-            </div>
-            <div class="form-style">
-              <label for="message">Message:</label>
-              <textarea name="message" id="message" cols="30" rows="3"></textarea>
-            </div>
-          </section>
+            <!-- <div class="contact-btn">
+              <input type="submit" value="Submit" class="contact-btn-style" />
+            </div> -->
+            <button type="submit">Submit</button>
+          </form>
           <h2 class="comment-underline">Comments</h2>
           <section class="comment-section">
             <!-- <h2>this is a comment :p</h2> -->

@@ -1,7 +1,8 @@
 const apiBase = "https://thecozycookingpot.elisemariehogsnes.no";
 const postBace = "/wp-json";
+const commentEndpoint = "/wp/v2/comments";
 const postEndpoint = "/wp/v2/posts/";
-const mediaEndpoint = "?_embed";
+const embeddedBase = "?_embed";
 
 // async function fetchApi(){
 //         const response = await fetch(apiBase + postBace + postEndpoint);
@@ -12,6 +13,7 @@ const mediaEndpoint = "?_embed";
 export{
     apiBase,
     postBace,
+    commentEndpoint,
     postEndpoint,
-    mediaEndpoint
+    embeddedBase
 }
