@@ -128,13 +128,13 @@ function formSubmission(){
         const CommentPost = new URLSearchParams(preCommentPost);
         console.log("commentPost",[...CommentPost]);
 
-        // fetch(`https://thecozycookingpot.elisemariehogsnes.no/wp-json/wp/v2/comments`, {
-        //         method: "POST",
-        //         body: CommentPost,
-        //     })
-        //     .then(res => res.json())
-        //     .then(data => console.log(data))
-        //     .catch(err => console.log(err));
+        fetch(`https://thecozycookingpot.elisemariehogsnes.no/wp-json/wp/v2/comments`, {
+                method: "POST",
+                body: CommentPost,
+            })
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .catch(err => console.log(err));
     }
     else {
         commentSubmissionMessage.innerText = 'Your comment does not meet the requirement. Correct the errors and try again.';

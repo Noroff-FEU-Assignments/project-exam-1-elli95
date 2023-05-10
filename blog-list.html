@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/blog-list.css" />
     <link rel="stylesheet" href="css/media.css" />
     <script type="module" src="js/blog-list.js" defer></script>
+    <script type="module" src="js/search.js" defer></script>
   </head>
   <body>
     <header>
@@ -50,6 +51,7 @@
       </section>
     </header>
     <section class="main-content blog-list-content">
+      <div id="search-list-result" class="search-list-result"></div>
       <h1>Check out our latest recipes and posts</h1>
       <section class="blog-filter">
         <!-- <h2>Filter</h2> -->
@@ -64,10 +66,6 @@
         <div class="blogg-filter-btn-style">
           <input type="checkbox" name="dinner" value="dinner" id="dinner" />
           <label for="dinner">Dinner</label>
-        </div>
-        <div class="blogg-filter-btn-style">
-          <input type="checkbox" name="fleece" value="fleece" id="fleece" />
-          <label for="fleece">Fleece</label>
         </div>
         <div class="blogg-filter-btn-style">
           <input type="checkbox" name="dessert" value="dessert" id="dessert" />
