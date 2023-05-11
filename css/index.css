@@ -43,12 +43,19 @@
 .blog-carousel-section {
     display: grid;
     grid-template-areas:
+    "a" 
     "b" 
     "e";
     justify-content: center;
     align-items: center;
     gap: 30px;
     padding: 50px 100px;  
+}
+
+.carousel-title {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
 }
 
 .arrow-style {

@@ -60,8 +60,13 @@
 
     .blog-carousel-section {
         grid-template-areas:
-        "a b d" 
-        "c c c";
+            "a a a" 
+            "b c e" 
+            "d d d";
+    }
+
+    .carousel-title {
+        font-size: 2rem;
     }
 
     .carusel-content-box{
