@@ -39,7 +39,7 @@ function searchResultsList(result){
     searchResult.classList.add("search-list-result");
     Object.values(result).forEach(function(blogPost) {
         searchResult.innerHTML += ` <a class="search-list-products" href="/specific-blog-post.html?id=${blogPost.id}">
-                                    <img src="${blogPost._embedded["wp:featuredmedia"][0].source_url}" alt="" />
+                                    <img src="${blogPost._embedded["wp:featuredmedia"][0].source_url}" alt="${blogPost._embedded["wp:featuredmedia"][0].alt_text}" />
                                     <p>${blogPost.title.rendered}</p>
                                     </a>
                                   `;

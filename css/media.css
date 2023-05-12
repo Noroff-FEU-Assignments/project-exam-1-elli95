@@ -52,6 +52,16 @@
     }
 
     /* index */
+    .introduction-img {
+        display: block;
+    }
+
+    .introduction-text-style {
+        position: absolute;
+        top: 130px;
+        width: 300px;
+    }
+
     .arrow-style {
         display: flex;
         font-size: 3rem;
@@ -94,6 +104,44 @@
 
     .read-more {
         display: none;
+    }
+
+    .meal-info {
+        display: grid;
+        grid-template-areas:
+        "a c" 
+        "b c" 
+        "d d";
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .meal-info h2 {
+        align-self: end;
+    }
+
+    .meal-info h2,
+    .meal-info h3 {
+        padding-right: 20px;
+        max-width: 670px;
+    }
+
+    .try-new-title {
+        padding: 20px 0px 0px 0px;
+    }
+
+    .try-new {
+        grid-template-columns: repeat(4, auto);
+        grid-template-areas:
+        "a b b" 
+        "a c c" 
+        "a d d";
+        width: 90%;
+        max-width: 1295px;
+    }
+
+    .try-new h2 {
+        justify-self: start;
+        padding: 20px 0px 0px 15px;
     }
 
     /*specific blog list */
@@ -178,6 +226,27 @@
         padding: 7px 20px;
     }
 
+    /* index */
+    .introduction-text-style {
+        top: 163px;
+        width: 360px;
+    }
+
+    .introduction h1 {
+        font-size: 2.5rem;
+    }
+
+    .try-new-title {
+        font-size: 2rem;
+    }
+/* 
+    .try-new h2{
+        font-size: 2rem;
+    }
+
+    .post-excerpt p {
+        font-size: 1.6rem;
+    } */
     /* blog list */
     .blog-section {
         grid-template-columns: repeat(3, auto);
@@ -247,6 +316,15 @@
 } */
 
 @media (min-width: 1400px) {
+    .introduction-text-style {
+        top: 165px;;
+        width: 555px;
+    }
+    
+    .introduction h1 {
+        font-size: 4rem;
+    }
+
     .carusel-content-box {
         width: 1280px;
     }
@@ -270,6 +348,7 @@
         font-size: 1.3rem;
     }
 
+    
     /* Contact */
     
     .img-box {
@@ -284,7 +363,7 @@
 
 @media (min-width: 1850px) {
     /* Index */
-    .introduction-text-style {
+    /* .introduction-text-style {
         display: block;
         position: absolute;
         transform: translate(-50%, -50%);
@@ -293,7 +372,7 @@
         background-color: #0000002b;
         color: white;
         padding: 0px 15px;
-    }
+    } */
 /* 
     .arrow-style {
         display: flex;
@@ -335,4 +414,15 @@
     .read-more {
         display: none;
     } */
+}
+
+@media (min-width: 2000px){
+    .introduction-text-style {  
+        top: 190px;
+        width: 795px;
+    }
+
+    .introduction h1 {
+        font-size: 6rem;
+    }
 }

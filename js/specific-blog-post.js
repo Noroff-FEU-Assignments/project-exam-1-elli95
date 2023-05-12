@@ -35,7 +35,7 @@ async function contentInfo(){
     pageContent.innerHTML = "";
 
         pageContent.innerHTML += `  <h1>${apiData.title.rendered}</h1>
-                                    <img src="${apiData._embedded["wp:featuredmedia"][0].source_url}" alt="" />
+                                    <img src="${apiData._embedded["wp:featuredmedia"][0].source_url}" alt="${apiData._embedded["wp:featuredmedia"][0].alt_text}" />
                                     <p class="date">${apiData.date_gmt}</p>
                                     <div class="description-ingredients">
                                     ${apiData.content.rendered}

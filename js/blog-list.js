@@ -45,7 +45,7 @@ async function contentInfo(){
     // console.log(postData._links['wp:featuredmedia'][0].href)
 
         pageContent.innerHTML += `  <a href="/specific-blog-post.html?id=${postData.id}" class="blog-entry">
-                                    <img src="${postData._embedded["wp:featuredmedia"][0].source_url}" alt="" />
+                                    <img src="${postData._embedded["wp:featuredmedia"][0].source_url}" alt="${postData._embedded["wp:featuredmedia"][0].alt_text}" />
                                     <h2>${postData.title.rendered}</h2>
                                     <p>${postData.date_gmt}</p>
                                     </a>`
@@ -74,7 +74,7 @@ async function fetchMorePosts(){
             // console.log(postData._links['wp:featuredmedia'][0].href)
         
                 pageContent.innerHTML += `  <a href="/specific-blog-post.html?id=${postData.id}" class="blog-entry">
-                                            <img src="${postData._embedded["wp:featuredmedia"][0].source_url}" alt="" />
+                                            <img src="${postData._embedded["wp:featuredmedia"][0].source_url}" alt="${postData._embedded["wp:featuredmedia"][0].alt_text}" />
                                             <h2>${postData.title.rendered}</h2>
                                             <p>${postData.date_gmt}</p>
                                             </a>`
@@ -94,4 +94,86 @@ async function fetchMorePosts(){
         console.log(error);
         pageContent.innerHTML = error;
     }
+}
+
+
+const breakfastBtn = document.querySelector("#breakfast");
+const lunchBtn = document.querySelector("#lunch");
+const dinnerBtn = document.querySelector("#dinner");
+const dessertBtn = document.querySelector("#dessert");
+
+breakfastBtn.addEventListener("click", breakfast);
+lunchBtn.addEventListener("click", lunch);
+dinnerBtn.addEventListener("click", dinner);
+dessertBtn.addEventListener("click", dessert);
+
+async function get99Apiposts(){
+
+    var pageAmount = "&per_page=99";
+    
+    const response = await fetch(apiBase + postBace + postEndpoint + embeddedBase + pageAmount);
+    const data = await response.json();
+    pageContent.innerHTML = "";
+
+    return data;
+}
+
+var filterActive = true;
+
+async function breakfast(){
+
+    if(filterActive = true){
+    const apiData = await get99Apiposts();
+
+    filterActive = false;
+    console.log("filterActive",filterActive);
+    let result = apiData.filter(blogPost => blogPost._embedded["wp:term"][1][0].name === "Breakfast");
+    console.log("breakfastBtn",result);
+    blogListPostStyle(result);
+    }
+    else{
+        
+    console.log("helllllllllllllllllllllllllllllllo!");
+    }
+
+}
+
+async function lunch(){
+
+    const apiData = await get99Apiposts();
+
+    let result = apiData.filter(blogPost => blogPost._embedded["wp:term"][1][0].name === "Lunch");
+    console.log("breakfastBtn",result);
+    blogListPostStyle(result);
+}
+
+async function dinner(){
+
+    const apiData = await get99Apiposts();
+
+    let result = apiData.filter(blogPost => blogPost._embedded["wp:term"][1][0].name === "Dinner");
+    console.log("breakfastBtn",result);
+    blogListPostStyle(result);
+}
+
+async function dessert(){
+
+    const apiData = await get99Apiposts();
+
+    let result = apiData.filter(blogPost => blogPost._embedded["wp:term"][1][0].name === "Dessert");
+    console.log("breakfastBtn",result);
+    blogListPostStyle(result);
+}
+
+
+function blogListPostStyle(result){
+
+    Object.values(result).forEach(function(postData){
+        pageContent.innerHTML += `  <a href="/specific-blog-post.html?id=${postData.id}" class="blog-entry">
+                                                <img src="${postData._embedded["wp:featuredmedia"][0].source_url}" alt="${postData._embedded["wp:featuredmedia"][0].alt_text}" />
+                                                <h2>${postData.title.rendered}</h2>
+                                                <p>${postData.date_gmt}</p>
+                                                </a>`
+                                                
+    });
 }
