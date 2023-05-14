@@ -7,6 +7,8 @@ const arrowLeft = document.querySelector(".arrow-left");
 const arrowRight = document.querySelector(".arrow-right");
 
 arrowLeft.addEventListener("click",lastEntryRow);
+arrowLeft.addEventListener("touch",lastEntryRow);
+
 arrowRight.addEventListener("click",nextEntryRow);
 
 const entrySize = caruselContent.clientWidth;
