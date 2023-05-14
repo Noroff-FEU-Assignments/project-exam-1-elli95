@@ -68,22 +68,22 @@
         cursor: pointer;
     }
 
-    .blog-carousel-section {
+    /* .blog-carousel-section {
         grid-template-areas:
             "a a a" 
             "b c e" 
             "d d d";
-    }
+    } */
 
     .carousel-title {
         font-size: 2rem;
     }
 
-    .carusel-content-box{
+    /* .carusel-content-box{
         width: 640px;
         overflow-x: hidden;
         scroll-behavior: smooth;
-    }
+    } */
 
     .carusel-content {
         display: flex;

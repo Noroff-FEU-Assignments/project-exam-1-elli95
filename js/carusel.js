@@ -28,7 +28,8 @@ function lastEntryRow (){
         console.log("hello2y",blogPostContainer[i]);
         if(clicks === -1 || clicks === 2 ){
             clicks = 2;
-            blogPostContainer[i].style.transform = `translateX(-3380px)`;
+            // blogPostContainer[i].style.transform = `translateX(-3380px)`;
+            blogPostContainer[i].style.transform = `translateX(${-entrySize * 2}px)`;
             blogPostContainer[i].style.transition = "300ms ease-in-out transform";
             // blogEntry.style.transform = `translateX(-3380px)`;
             // blogEntry.style.transition = "300ms ease-in-out transform";
