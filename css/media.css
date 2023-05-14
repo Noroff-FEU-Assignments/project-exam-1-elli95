@@ -1,3 +1,9 @@
+@media (min-width: 600px){
+    .carusel-content-box {
+        width: 440px;
+    }
+}
+
 @media (min-width: 700px) {
     .blog-section {
         grid-template-columns: repeat(2, auto);
@@ -7,10 +13,10 @@
         font-size: 2rem;
     }
 
-    .carusel-content {
+    /* .carusel-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
-    }
+    } */
 }
 
 @media (min-width: 800px){
@@ -94,6 +100,14 @@
         gap: 0px;
         flex-flow: initial;
         justify-content: initial;
+    }
+
+    .carusel-content-box {
+        width: 640px;
+    }
+
+    .blog-entry img {
+        width: 300px;
     }
 
     .carousel-nav-symbols-row {
