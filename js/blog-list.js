@@ -37,6 +37,11 @@ FetchApi();
 async function contentInfo(){
     const apiData = await FetchApi();
     console.log("data", apiData);
+    
+    hideXMark();
+    thePageNr = 1;
+    
+    ViewMoreBtn.style.display = "block";
     pageContent.innerHTML = "";
     Object.values(apiData).forEach(function(postData){
 
@@ -79,6 +84,14 @@ async function fetchMorePosts(){
                                             <p>${postData.date_gmt}</p>
                                             </a>`
             });
+
+            console.log("data.length",data.length)
+
+        if(data.length < 10  ){
+            console.log("there is no more");
+            ViewMoreBtn.style.display = "none";
+        } 
+
         // }
         // then {
             
@@ -97,15 +110,19 @@ async function fetchMorePosts(){
 }
 
 
-const breakfastBtn = document.querySelector("#breakfast");
-const lunchBtn = document.querySelector("#lunch");
-const dinnerBtn = document.querySelector("#dinner");
-const dessertBtn = document.querySelector("#dessert");
+const breakfastBtn = document.querySelector(".breakfast-label");
+const lunchBtn = document.querySelector(".lunch-label");
+const dinnerBtn = document.querySelector(".dinner-label");
+const dessertBtn = document.querySelector(".dessert-label");
+// const xMark = document.querySelector(".x-mark");
+
 
 breakfastBtn.addEventListener("click", breakfast);
 lunchBtn.addEventListener("click", lunch);
 dinnerBtn.addEventListener("click", dinner);
 dessertBtn.addEventListener("click", dessert);
+
+
 
 async function get99Apiposts(){
 
@@ -118,23 +135,36 @@ async function get99Apiposts(){
     return data;
 }
 
-var filterActive = true;
+// var filterActive = true;
+
+
+const xMarkBreakfast = document.querySelector(".x-mark-breakfast");
+const xMarkLunch = document.querySelector(".x-mark-lunch");
+const xMarkDinner = document.querySelector(".x-mark-dinner");
+const xMarkDessert = document.querySelector(".x-mark-dessert");
 
 async function breakfast(){
 
-    if(filterActive = true){
+    // if(filterActive = true){
     const apiData = await get99Apiposts();
 
-    filterActive = false;
-    console.log("filterActive",filterActive);
+    // const breakfastX = document.querySelector(".x-mark");
+    // const breakfastXBtn = breakfastBtn & xMark;
+    // console.log("breakfastXBtn",breakfastXBtn);
+    // filterActive = false;
+    // console.log("filterActive",filterActive);
+    hideXMark();
+    // ViewMoreBtn.style.display = "none";
+
+    xMarkBreakfast.style.display = "initial";
     let result = apiData.filter(blogPost => blogPost._embedded["wp:term"][1][0].name === "Breakfast");
     console.log("breakfastBtn",result);
     blogListPostStyle(result);
-    }
-    else{
+    // }
+    // else{
         
-    console.log("helllllllllllllllllllllllllllllllo!");
-    }
+    // console.log("helllllllllllllllllllllllllllllllo!");
+    // }
 
 }
 
@@ -142,6 +172,8 @@ async function lunch(){
 
     const apiData = await get99Apiposts();
 
+    hideXMark();
+    xMarkLunch.style.display = "initial";
     let result = apiData.filter(blogPost => blogPost._embedded["wp:term"][1][0].name === "Lunch");
     console.log("breakfastBtn",result);
     blogListPostStyle(result);
@@ -151,6 +183,8 @@ async function dinner(){
 
     const apiData = await get99Apiposts();
 
+    hideXMark();
+    xMarkDinner.style.display = "initial";
     let result = apiData.filter(blogPost => blogPost._embedded["wp:term"][1][0].name === "Dinner");
     console.log("breakfastBtn",result);
     blogListPostStyle(result);
@@ -160,6 +194,8 @@ async function dessert(){
 
     const apiData = await get99Apiposts();
 
+    hideXMark();
+    xMarkDessert.style.display = "initial";
     let result = apiData.filter(blogPost => blogPost._embedded["wp:term"][1][0].name === "Dessert");
     console.log("breakfastBtn",result);
     blogListPostStyle(result);
@@ -177,3 +213,20 @@ function blogListPostStyle(result){
                                                 
     });
 }
+
+function hideXMark(){
+    ViewMoreBtn.style.display = "none";
+    xMarkBreakfast.style.display = "none";
+    xMarkLunch.style.display = "none";
+    xMarkDinner.style.display = "none";
+    xMarkDessert.style.display = "none";
+}
+
+
+const faXMark = document.querySelectorAll(".fa-xmark");
+for (let i = 0; i < faXMark.length; i++) {
+    faXMark[i].addEventListener("click", contentInfo);
+}
+
+// function closeFilter(){
+// }

@@ -69,3 +69,10 @@
     text-align: end;
     padding: 3px 15px 5px 0px;
 }
+
+.x-mark-breakfast,
+.x-mark-lunch, 
+.x-mark-dinner, 
+.x-mark-dessert  {
+    display: none;
+}

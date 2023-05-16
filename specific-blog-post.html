@@ -15,13 +15,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/specific-blog-post.css" />
     <link rel="stylesheet" href="css/media.css" />
     <script type="module" src="js/search.js" defer></script>
     <script type="module" src="js/specific-blog-post.js" defer></script>
     <script type="module" src="js/comment.js" defer></script>
+    <link rel="shortcut icon" href="#" />
   </head>
   <body>
     <header>
@@ -55,6 +56,7 @@
       <div id="search-list-result"></div>
       <section class="specific-blog-post-content">
         <section class="blog-post-content">
+          <div class="loading"></div>
           <!-- <h1>Classic Deliciousness Waffles</h1>
         <img src="images/humphrey-muleba-jABXuTS1azc-unsplash.webp" alt="" />
         <p class="date">27.04.2023</p>
@@ -124,12 +126,18 @@
       </section>
     </section>
     <footer>
-      <label for="subscribe-newsletter"
-        >Subscribe to our newsletter:
-        <span class="wave-form-lable-fix">Subscribe to our newsletter</span>
-      </label>
-      <input type="email" id="subscribe-newsletter" />
-      <button class="sign-up-btn">Sign me up</button>
+      <form class="subscribe-form">
+        <div class="form-style">
+          <label for="subscribe-newsletter">Subscribe to our newsletter:</label>
+          <input type="text" name="email" id="subscribe-newsletter" />
+          <div class="error-message-style" id="error-email">Please enter a valid email.</div>
+        </div>
+        <div id="error-message"></div>
+        <div id="form-message-submission"></div>
+        <div class="contact-btn">
+          <input type="submit" value="Submit" class="contact-btn-style" />
+        </div>
+      </form>
     </footer>
   </body>
 </html>

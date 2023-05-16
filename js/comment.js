@@ -120,24 +120,34 @@ function emailValidate(email) {
 function formSubmission(){
     // console.log(post);
     if (valueLength(nameInput.value, 1) && emailValidate(emailInput.value) && valueLength(messageInput.value, 1)){
+    // if (valueLength(nameInput.value, 1) && valueLength(messageInput.value, 1)){
         commentSubmissionMessage.innerText = 'Your comment has been submitted.';
         commentSubmissionMessage.classList.add("submission-success");
-        
-        //Reference: POST form data using JavaScript's Fetch AP  https://www.youtube.com/watch?v=TTf0mMl0Sc4
-        const preCommentPost = new FormData(commentForm);
-        const CommentPost = new URLSearchParams(preCommentPost);
-        console.log("commentPost",[...CommentPost]);
 
+        const CommentPost = { 
+                post: productId,
+                author_name: nameInput.value,
+                author_email: emailInput.value,
+                content: messageInput.value,
+            };
+        
         fetch(`https://thecozycookingpot.elisemariehogsnes.no/wp-json/wp/v2/comments`, {
                 method: "POST",
-                body: CommentPost,
+                headers: {"content-Type": "application/json",},
+                // body: CommentPost,
+                body: JSON.stringify(CommentPost),
             })
             .then(res => res.json())
             .then(data => console.log(data))
-            .catch(err => console.log(err));
+            .catch(err => console.log(err))
+            .then(contentInfo());
+           
+        
+    
     }
     else {
         commentSubmissionMessage.innerText = 'Your comment does not meet the requirement. Correct the errors and try again.';
         commentSubmissionMessage.classList.add("submission-fail");
     }
 }
+// contentInfo();

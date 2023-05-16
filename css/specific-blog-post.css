@@ -53,6 +53,8 @@
     font-size: 1.1rem;
     margin: 0px;
     grid-area: b;
+    height: fit-content;
+    background-color: white;
 }
 
 .description-ingredients ol{
@@ -83,4 +85,24 @@
 
 .comment-underline {
     border-bottom: solid 1px black;
+}
+
+.modal-section {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.55);
+}
+
+.modal-img-style {
+    position: fixed;
+    top: 4%;
+    left: 15%;
+    width: 70%;
 }

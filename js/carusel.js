@@ -7,11 +7,13 @@ const arrowLeft = document.querySelector(".arrow-left");
 const arrowRight = document.querySelector(".arrow-right");
 
 arrowLeft.addEventListener("click",lastEntryRow);
-arrowLeft.addEventListener("touch",lastEntryRow);
+// arrowLeft.addEventListener("touchstart",lastEntryRow);
 
 arrowRight.addEventListener("click",nextEntryRow);
 
 const entrySize = caruselContent.clientWidth;
+// const entrySize = caruselContent.style.width;
+console.log(entrySize)
 
 // Reference: How To Make An Infinite Image Slider That Loops with HTML CSS and JavaScript  https://www.youtube.com/watch?v=wjC8iGt67UE
 
