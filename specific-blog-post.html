@@ -92,7 +92,7 @@
         </ol> -->
         </section>
         <section>
-          <h2>Add a comment</h2>
+          <h2 class="add-comment-titel">Add a comment</h2>
           <form method="post" class="comment-form">
             <div>
               <div id="error-message"></div>
@@ -116,9 +116,9 @@
             <!-- <div class="contact-btn">
               <input type="submit" value="Submit" class="contact-btn-style" />
             </div> -->
-            <button type="submit">Submit</button>
+            <button class="btn-style" type="submit">Submit</button>
           </form>
-          <h2 class="comment-underline">Comments</h2>
+          <h2 class="comment-underline">Comments:</h2>
           <section class="comment-section">
             <!-- <h2>this is a comment :p</h2> -->
           </section>
@@ -127,17 +127,15 @@
     </section>
     <footer>
       <form class="subscribe-form">
-        <div class="form-style">
-          <label for="subscribe-newsletter">Subscribe to our newsletter:</label>
-          <input type="text" name="email" id="subscribe-newsletter" />
-          <div class="error-message-style" id="error-email">Please enter a valid email.</div>
-        </div>
-        <div id="error-message"></div>
-        <div id="form-message-submission"></div>
-        <div class="contact-btn">
-          <input type="submit" value="Submit" class="contact-btn-style" />
-        </div>
+        <label for="subscribe-newsletter">Subscribe to our newsletter:</label>
+        <input type="text" name="email" id="subscribe-newsletter" />
+        <!-- <div class="contact-btn"> -->
+        <input type="submit" value="Submit" class="btn-style contact-btn" />
+        <!-- </div> -->
       </form>
+      <div class="error-message-style" id="subscribe-error-email">Please enter a valid email.</div>
+      <div id="subscribe-error-message"></div>
+      <div id="subscribe-form-message-submission"></div>
     </footer>
   </body>
 </html>

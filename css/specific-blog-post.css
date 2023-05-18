@@ -43,7 +43,8 @@
 .description-ingredients h2{
     font-size: 1.4rem;
     margin: 0px;
-    grid-area: a;
+    grid-area: a;  
+    font-family: 'Comic Neue', cursive;
 }
 
 .wp-block-table {
@@ -83,9 +84,9 @@
     border-radius: 3px;
 }
 
-.comment-underline {
+/* .comment-underline {
     border-bottom: solid 1px black;
-}
+} */
 
 .modal-section {
     display: none;
@@ -105,4 +106,31 @@
     top: 4%;
     left: 15%;
     width: 70%;
+}
+
+.comment-section {
+    max-width: 650px;
+}
+
+.add-comment-titel,
+.comment-form {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+
+.comment-box {
+    border-top: solid 1px black;
+}
+
+.comment-author {
+    font-weight: bold;
+}
+
+.comment-text {
+    font-weight: normal;
+}
+
+.comment-date{
+    text-align: end;
 }

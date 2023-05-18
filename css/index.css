@@ -33,6 +33,7 @@
     padding: 5px 8px 5px 5px;
     text-align: center;
     border-bottom: solid 2px black;
+    /* font-family: 'Noto Serif', serif; */
 }
 
 .introduction h2 {  
@@ -105,7 +106,9 @@
 
 .blog-entry h2 {
     margin: 0px;
-    padding: 0px 0px 10px 20px;
+    /* padding: 0px 0px 10px 20px; */
+    justify-self: center;
+    text-align: center;
 }
 
 .blog-entry p {
@@ -273,6 +276,8 @@
 
 .try-new h2{
     font-size: 1.6rem;
+    justify-self: center;
+    text-align: center;
 }
 
 .try-new h2,
@@ -285,6 +290,7 @@
     text-align: left;
     padding-left: 15px;
     font-size: 1.4rem;
+    font-weight: normal;
 }
 
 .try-new-date {

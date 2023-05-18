@@ -17,12 +17,16 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     } */
+
+    footer form {
+        flex-direction: row;
+    }
 }
 
 @media (min-width: 800px){
     header {
         display: flex;
-        position: unset;
+        /* position: unset; */
         padding: 0px 19px;
     }
     
@@ -58,7 +62,7 @@
     }
 
     .main-content {
-        padding-top: 0px;
+        padding-top: 82px;
     }
 
     /* index */
@@ -68,8 +72,12 @@
 
     .introduction-text-style {
         position: absolute;
-        top: 130px;
-        width: 300px;
+        top: 120px;
+        width: 330px;
+    }
+
+    .introduction h1 {
+        border-bottom: none;
     }
 
     .arrow-style {
@@ -162,6 +170,7 @@
         padding: 20px 0px 0px 15px;
     }
 
+
     /*specific blog list */
     .post-style {
         font-size: 1.6rem;
@@ -189,8 +198,13 @@
         min-height: 60px;
     }
 
-    .contact-btn-style {
+    /* .contact-btn-style {
         padding: 7px 30px;
+        font-size: 1rem;
+    } */
+
+    .btn-style {
+        padding: 10px 30px;
         font-size: 1rem;
     }
 
@@ -244,10 +258,14 @@
         padding: 7px 20px;
     }
 
+    .main-content {
+        padding-top: 96px;
+    }
+
     /* index */
     .introduction-text-style {
-        top: 163px;
-        width: 360px;
+        top: 145px;
+        width: 400px;
     }
 
     .introduction h1 {
@@ -335,8 +353,9 @@
 
 @media (min-width: 1400px) {
     .introduction-text-style {
-        top: 165px;;
-        width: 555px;
+        top: 130px;
+        width: 610px;
+        margin-right: 40px;
     }
     
     .introduction h1 {
@@ -366,6 +385,9 @@
         font-size: 1.3rem;
     }
 
+    .main-content {
+        padding-top: 105px;
+    }
     
     /* Contact */
     
@@ -436,8 +458,9 @@
 
 @media (min-width: 2000px){
     .introduction-text-style {  
-        top: 190px;
-        width: 795px;
+        top: 135px;
+        width: 890px;
+        margin-right: 80px;
     }
 
     .introduction h1 {

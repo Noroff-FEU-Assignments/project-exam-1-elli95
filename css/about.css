@@ -35,5 +35,6 @@
 
 .about-content h2 {
     padding: 15px 35px;
-    margin: 0px;
+    margin: 0px;  
+    font-family: 'Comic Neue', cursive;
 }

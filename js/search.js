@@ -53,11 +53,11 @@ function noSearchList(){
 
 
 const email = document.querySelector("#subscribe-newsletter");
-const emailError = document.querySelector("#error-email");
+const emailError = document.querySelector("#subscribe-error-email");
 
 const subscribeForm = document.querySelector(".subscribe-form");
-const errorMessage = document.querySelector("#error-message");
-const formMessageSubmission = document.querySelector("#form-message-submission");
+const errorMessage = document.querySelector("#subscribe-error-message");
+const formMessageSubmission = document.querySelector("#subscribe-form-message-submission");
 
 subscribeForm.addEventListener("submit", subscribeFormFormValidator);
 subscribeForm.addEventListener("submit", formSubmission);

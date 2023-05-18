@@ -25,10 +25,11 @@ form,
     font-weight: normal;
     margin-top: 0px;
     width: 335px;
+    font-family: 'Comic Neue', cursive;
 }
 
-form,
-.contact-btn-style {
+form
+/* .contact-btn-style  */{
     font-weight: bold;
 }
 
@@ -43,11 +44,14 @@ textarea{
     border-radius: 3px;
 }
 
-.contact-btn-style {
+/* .btn-style {
     padding: 5px 20px;
     margin-top: 15px;
     text-transform: uppercase;
-}
+    background-color: #42e813;
+    border: solid 1px black;
+    border-radius: 7px;
+} */
 
 
 /* .error-message-style {

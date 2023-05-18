@@ -69,7 +69,7 @@ async function thisWeeksSpecial(){
                                             <h3 class="grid-b">${postData.excerpt.rendered}</h3>
                                             <img class="grid-c" src="${postData._embedded["wp:featuredmedia"][0].source_url}" alt="${postData._embedded["wp:featuredmedia"][0].alt_text}" />
                                             </div>
-                                            <a href="/specific-blog-post.html?id=${postData.id}" class="meal-info-btn">Learn more</a>`
+                                            <a href="/specific-blog-post.html?id=${postData.id}"  class="btn-style meal-info-btn">Learn more <i class="fa-solid fa-arrow-right"><span class="wave-form-lable-fix">Learn more arrow</span></i></a>`
     });
 }
 thisWeeksSpecial();

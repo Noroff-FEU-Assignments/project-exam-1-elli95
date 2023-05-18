@@ -62,8 +62,16 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 0px 20px 0px;
-    background-color: var(--menu-standar-color);  
+    /* padding: 10px 0px 20px 0px; */
+    padding: 20px 0px 40px 0px;
+    background-color: var(--menu-standar-color); 
+    justify-content: center;   
+}
+
+footer form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 footer label {
@@ -73,6 +81,10 @@ footer label {
 footer input {
     margin: 5px;
     border-radius: 5px;
+}
+
+footer div {
+    width: auto;
 }
 
 .sign-up-btn {
@@ -87,8 +99,13 @@ footer input {
     font-family: 'Comic Neue', cursive;
 }
 
+h1 {
+    font-family: 'Noto Serif', serif;
+}
+
 .main-content h2 {
     font-weight: normal;
+    font-family: 'Noto Serif', serif;
 }
 
 /* reference: https://blog.pope.tech/2020/02/28/missing-form-label-search/ */
@@ -195,6 +212,17 @@ nav a {
     width: 300px;
     padding-top: 20px;
     font-size: 1.3rem;
+}
+
+/* button */
+.btn-style {
+    padding: 5px 20px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    background-color: #42e813;
+    border: solid 1px black;
+    border-radius: 7px;
+    font-weight: bold;
 }
 
 /* Font edits: */
