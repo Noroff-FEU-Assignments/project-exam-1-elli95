@@ -39,10 +39,23 @@ async function contentInfo(){
 
         Object.values(commentList).forEach(function(commentData){
             // console.log("commentData----commentData", commentData);
+            
+            //Date.prototype.toLocaleString()  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
+            let date =  new Date(commentData.date);
+
+            const options = {
+                // weekday: "long",
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+            };
+            
+            const commentDate = date.toLocaleString("en-GB", options);
+
             pageContent.innerHTML += `  <div class="comment-box">
                                         <h2 class="comment-author">${commentData.author_name}</h2>
                                         <h3 class="comment-text">${commentData.content.rendered}</h3>
-                                        <p class="comment-date">${commentData.date}</p>
+                                        <p class="comment-date">${commentDate}</p>
                                         </div>`
         });
     }

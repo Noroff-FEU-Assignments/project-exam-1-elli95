@@ -188,6 +188,10 @@
         grid-gap: 10%;
     }
 
+    .modal-img {
+        width: 60%
+    }
+
     /* Contact */
     .contact-form h1 {
         font-size: 2rem;
@@ -403,6 +407,12 @@
         padding-top: 105px;
     } */
     
+    /* blog specific post */
+
+    .modal-img {
+        width: 50%;
+    }
+
     /* Contact */
     
     .img-box {
@@ -470,6 +480,11 @@
     .read-more {
         display: none;
     } */
+
+    /* blog specific post */
+    .modal-img {
+      width: 40%;
+    }
 }
 
 @media (min-width: 2000px){

@@ -32,7 +32,7 @@ FetchApi();
 
 async function contentInfo(){
     const apiData = await FetchApi();
-    console.log("data123", apiData);
+    // console.log("data123", apiData);
     pageContent.innerHTML = "";
 
     //Date.prototype.toLocaleString()  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
@@ -52,7 +52,7 @@ async function contentInfo(){
         pageContent.innerHTML += `  <h1>${apiData.title.rendered}</h1>
                                     <img src="${apiData._embedded["wp:featuredmedia"][0].source_url}" alt="${apiData._embedded["wp:featuredmedia"][0].alt_text}" />
                                     <div class="modal-section">
-                                    <div class="modal-img">hello</div>
+                                    <div class="modal-img"></div>
                                     </div>
                                     <p class="date">${postDate}</p>
                                     <div class="description-ingredients">
@@ -63,6 +63,7 @@ async function contentInfo(){
             for (let i = 0; i < pageImg.length; i++) {
                 pageImg[i].addEventListener("click", biggerImg);
             }
+            
 }
 contentInfo();
 
@@ -89,14 +90,14 @@ contentInfo();
 
 
 async function biggerImg(){
-    const apiData = await FetchApi();
+    
+    let postImg = this;   
+
     const modalSection = document.querySelector(".modal-section");
     const modalImg = document.querySelector(".modal-img");
-    // console.log("modalSection",modalSection);
-    modalSection.style.display = "block";
-    // console.log("this is the way");
     
-    modalImg.innerHTML = `<img class="modal-img-style" src="${apiData._embedded["wp:featuredmedia"][0].source_url}" alt="${apiData._embedded["wp:featuredmedia"][0].alt_text}" />`
+    modalSection.style.display = "block";
+    modalImg.innerHTML = `<img class="modal-img-style" src="${postImg.src}" alt="${postImg.alt}" />`
 
     document.onclick = function(event) {
         if (event.target === modalSection) {
