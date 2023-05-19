@@ -31,7 +31,7 @@ FetchApi();
 
 async function contentInfo(){
     const apiData = await FetchApi();
-    // console.log("data123", apiData);
+    console.log("data123", apiData);
     pageContent.innerHTML = "";
 
     if(apiData._embedded.replies){
@@ -157,7 +157,11 @@ function formSubmission(){
             .then(data => console.log(data))
             .catch(error => console.log(error));
             commentForm.reset();
-            // contentInfo();
+        
+            setTimeout(() => {
+                contentInfo();
+            }, 500);
+            
             updateComments();
         
     
@@ -169,5 +173,8 @@ function formSubmission(){
 }
 // contentInfo();
 function updateComments(){
-    contentInfo();
+    // UpdateDelay(() => {
+    // setTimeout(() => {
+    //     console.log("Hello World!");
+    //   }, 500);
 }
