@@ -35,8 +35,17 @@ async function contentInfo(){
     console.log("data123", apiData);
     pageContent.innerHTML = "";
 
-    let date = apiData.date_gmt.toLocalString();
-    console.log("date",date);
+    //Date.prototype.toLocaleString()  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
+    let date =  new Date(apiData.date_gmt);
+
+    const options = {
+        // weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+    };
+    
+    const postDate = date.toLocaleString("en-GB", options);
 
     document.title = `The Cozy Cooking Pot | ${apiData.title.rendered}`;
 
@@ -45,7 +54,7 @@ async function contentInfo(){
                                     <div class="modal-section">
                                     <div class="modal-img">hello</div>
                                     </div>
-                                    <p class="date">${apiData.date_gmt}</p>
+                                    <p class="date">${postDate}</p>
                                     <div class="description-ingredients">
                                     ${apiData.content.rendered}
                                     </div>`

@@ -76,6 +76,7 @@
 .blog-entry h2 {
     margin: 0px;
     padding: 0px 0px 10px 20px;
+    height: 55px;
 }
 
 .blog-entry p {

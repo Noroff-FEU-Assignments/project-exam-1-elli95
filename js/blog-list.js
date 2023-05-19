@@ -48,11 +48,21 @@ async function contentInfo(){
     // const test11 = postData._links['wp:featuredmedia'][0].href;
     // console.log("111111111", test11)
     // console.log(postData._links['wp:featuredmedia'][0].href)
+        
+        let date =  new Date(postData.date_gmt);
+            
+        const options = {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+        };
+                
+        const postDate = date.toLocaleString("en-GB", options);
 
         pageContent.innerHTML += `  <a href="/specific-blog-post.html?id=${postData.id}" class="blog-entry">
                                     <img src="${postData._embedded["wp:featuredmedia"][0].source_url}" alt="${postData._embedded["wp:featuredmedia"][0].alt_text}" />
                                     <h2>${postData.title.rendered}</h2>
-                                    <p>${postData.date_gmt}</p>
+                                    <p>${postDate}</p>
                                     </a>`
     });
 }
@@ -73,6 +83,16 @@ async function fetchMorePosts(){
         
         // if(data.length){
             Object.values(data).forEach(function(postData){
+                        
+                let date =  new Date(postData.date_gmt);
+                    
+                const options = {
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric",
+                };
+                        
+                const postDate = date.toLocaleString("en-GB", options);
 
             // const test11 = postData._links['wp:featuredmedia'][0].href;
             // console.log("111111111", test11)
@@ -81,7 +101,7 @@ async function fetchMorePosts(){
                 pageContent.innerHTML += `  <a href="/specific-blog-post.html?id=${postData.id}" class="blog-entry">
                                             <img src="${postData._embedded["wp:featuredmedia"][0].source_url}" alt="${postData._embedded["wp:featuredmedia"][0].alt_text}" />
                                             <h2>${postData.title.rendered}</h2>
-                                            <p>${postData.date_gmt}</p>
+                                            <p>${postDate}</p>
                                             </a>`
             });
 
@@ -205,10 +225,21 @@ async function dessert(){
 function blogListPostStyle(result){
 
     Object.values(result).forEach(function(postData){
+        
+        let date =  new Date(postData.date_gmt);
+                    
+        const options = {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+        };
+                
+        const postDate = date.toLocaleString("en-GB", options);
+
         pageContent.innerHTML += `  <a href="/specific-blog-post.html?id=${postData.id}" class="blog-entry">
                                                 <img src="${postData._embedded["wp:featuredmedia"][0].source_url}" alt="${postData._embedded["wp:featuredmedia"][0].alt_text}" />
                                                 <h2>${postData.title.rendered}</h2>
-                                                <p>${postData.date_gmt}</p>
+                                                <p>${postDate}</p>
                                                 </a>`
                                                 
     });

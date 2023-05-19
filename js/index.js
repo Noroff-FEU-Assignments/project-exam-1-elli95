@@ -32,18 +32,47 @@ async function FetchApi(){
 }
 FetchApi();
 
+async function blogPostDate(){
+    const apiData = await FetchApi();
+    //Date.prototype.toLocaleString()  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
+    let date =  new Date(apiData.date_gmt);
+
+    console.log("date", apiData);
+
+    const options = {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+    };
+        
+    const postDate = date.toLocaleString("en-GB", options);
+    return postDate;
+}
+
+
 async function contentInfo(){
     const apiData = await FetchApi();
+    const postDate = await blogPostDate();
     console.log("data", apiData);
     caruselContent.innerHTML = "";
     // var apiData = apiData.length = 12
     Object.values(apiData).forEach(function(postData){
 
-    caruselContent.innerHTML += `  <a href="/specific-blog-post.html?id=${postData.id}" class="blog-entry carusel-blog-post" id="carusel-blog-post">
-                                    <img src="${postData._embedded["wp:featuredmedia"][0].source_url}" alt="${postData._embedded["wp:featuredmedia"][0].alt_text}" />
-                                    <h2>${postData.title.rendered}</h2>
-                                    <p>${postData.date_gmt}</p>
-                                    </a>`
+        let date =  new Date(postData.date_gmt);
+        
+        const options = {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+        };
+                
+        const postDate = date.toLocaleString("en-GB", options);
+
+        caruselContent.innerHTML += `  <a href="/specific-blog-post.html?id=${postData.id}" class="blog-entry carusel-blog-post" id="carusel-blog-post">
+                                        <img src="${postData._embedded["wp:featuredmedia"][0].source_url}" alt="${postData._embedded["wp:featuredmedia"][0].alt_text}" />
+                                        <h2>${postData.title.rendered}</h2>
+                                        <p>${postDate}</p>
+                                        </a>`
     });
     // innerText
 }
@@ -83,12 +112,22 @@ async function tryNewRecipes(){
     apiData.length = 4;
 
     Object.values(apiData).forEach(function(postData){
+            
+        let date =  new Date(postData.date_gmt);
+        
+        const options = {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+        };
+                
+        const postDate = date.toLocaleString("en-GB", options);
 
         tryNewContent.innerHTML += `  <a href="/specific-blog-post.html?id=${postData.id}" class="try-new carusel-blog-post" id="carusel-blog-post">
                                         <img class="grid-a" src="${postData._embedded["wp:featuredmedia"][0].source_url}" alt="${postData._embedded["wp:featuredmedia"][0].alt_text}" />
                                         <h2 class="grid-b">${postData.title.rendered}</h2>
                                         <h3 class="grid-c post-excerpt">${postData.excerpt.rendered}</h3>
-                                        <p class="grid-d try-new-date">${postData.date_gmt}</p>
+                                        <p class="grid-d try-new-date">${postDate}</p>
                                         </a>`
     });
 }
