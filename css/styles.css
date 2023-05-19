@@ -51,8 +51,11 @@ header {
 }
 
 .search-list-products img {
-    max-width: 100px;
     border-radius: 15px;
+    object-fit: cover;
+    object-position: center;
+    width: 100px;
+    height: 70px;
 }
 
 .search-list-products{

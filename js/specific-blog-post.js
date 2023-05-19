@@ -35,6 +35,9 @@ async function contentInfo(){
     console.log("data123", apiData);
     pageContent.innerHTML = "";
 
+    let date = apiData.date_gmt.toLocalString();
+    console.log("date",date);
+
     document.title = `The Cozy Cooking Pot | ${apiData.title.rendered}`;
 
         pageContent.innerHTML += `  <h1>${apiData.title.rendered}</h1>

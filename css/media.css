@@ -122,8 +122,10 @@
         width: 640px;
     }
 
-    .blog-entry img {
+    .blog-entry img,
+    .try-new img  {
         width: 300px;
+        height: 250px;
     }
 
     .carousel-nav-symbols-row {
@@ -453,8 +455,10 @@
         margin: 0px 8.5px;
     }
     
-    .blog-entry img {
+    .blog-entry img,
+    .try-new img {
         width: 400px;
+        height: 300px;
     }
 /* 
     .carousel-nav-symbols-row {

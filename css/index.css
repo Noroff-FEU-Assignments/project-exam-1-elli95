@@ -97,10 +97,14 @@
     margin: 0px 7px;
 }
 
-.blog-entry img {
+.blog-entry img,
+.try-new img {
     /* width: 400px; */
     /* width: 300px; */
+    object-fit: cover;
+    object-position: center;
     width: 200px;
+    height: 150px;
     padding: 10px;
 }
 
@@ -268,7 +272,7 @@
 }
 
 .try-new img {
-    width: 200px;
+    /* width: 200px; */
     align-self: center;
     justify-self: center;
     border-radius: 20px;
