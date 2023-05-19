@@ -49,8 +49,12 @@
         position: unset;
     }
 
-    #dropdown-searchbar:checked ~ form {
-        top: 90px;
+    /* #dropdown-searchbar:checked ~ form {
+        top: 82px;
+    } */
+
+    .search-list-result {
+        top: 81px;
     }
 
     .searchbar-button {
@@ -258,6 +262,10 @@
         padding: 7px 20px;
     }
 
+    .search-list-result {
+        top: 96px;
+    }
+
     .main-content {
         padding-top: 96px;
     }
@@ -385,9 +393,13 @@
         font-size: 1.3rem;
     }
 
-    .main-content {
-        padding-top: 105px;
+    .search-list-result {
+        top: 99px;
     }
+
+    /* .main-content {
+        padding-top: 105px;
+    } */
     
     /* Contact */
     

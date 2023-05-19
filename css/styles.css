@@ -31,7 +31,7 @@ header {
 }
 
 .logo h2 {
-    margin: 5px;
+    margin: 2px;
     font-size: 1.9rem;
 }
 
@@ -42,8 +42,12 @@ header {
     /* z-index: 5; */
     background-color: var(--menu-dropdown-color);
     width: 100%;
-    padding: 60px 0px;
-    z-index: 1;
+    padding: 10px 0px;
+    /* z-index: 1; */
+    left: 0;
+    top: 103px;
+    max-height: 645px;
+    overflow: scroll;
 }
 
 .search-list-products img {
