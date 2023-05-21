@@ -109,10 +109,21 @@ async function tryNewRecipes(){
 
     tryNewContent.innerHTML = "";
     
-    apiData.length = 4;
+    //Reference: Fisher–Yates Shuffle https://bost.ocks.org/mike/shuffle/
+    var mixedApiList = [], 
+    apiLength = apiData.length, 
+    apiShuffle;
 
-    Object.values(apiData).forEach(function(postData){
+    while (apiLength) {
+      apiShuffle = Math.floor(Math.random() * apiLength--);
+      mixedApiList.push(apiData.splice(apiShuffle, 1)[0]);
+    }
+
+    mixedApiList.length = 4;
+    
+    Object.values(mixedApiList).forEach(function(postData){
             
+
         let date =  new Date(postData.date_gmt);
         
         const options = {
@@ -123,12 +134,13 @@ async function tryNewRecipes(){
                 
         const postDate = date.toLocaleString("en-GB", options);
 
-        tryNewContent.innerHTML += `  <a href="/specific-blog-post.html?id=${postData.id}" class="try-new carusel-blog-post" id="carusel-blog-post">
+            tryNewContent.innerHTML += `  <a href="/specific-blog-post.html?id=${postData.id}" class="try-new carusel-blog-post" id="carusel-blog-post">
                                         <img class="grid-a" src="${postData._embedded["wp:featuredmedia"][0].source_url}" alt="${postData._embedded["wp:featuredmedia"][0].alt_text}" />
                                         <h2 class="grid-b">${postData.title.rendered}</h2>
                                         <h3 class="grid-c post-excerpt">${postData.excerpt.rendered}</h3>
                                         <p class="grid-d try-new-date">${postDate}</p>
                                         </a>`
+            
     });
 }
 tryNewRecipes();
