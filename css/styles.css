@@ -113,6 +113,7 @@ h1 {
 .main-content h2 {
     font-weight: normal;
     font-family: 'Noto Serif', serif;
+    margin-bottom: 0;
 }
 
 /* reference: https://blog.pope.tech/2020/02/28/missing-form-label-search/ */
@@ -207,6 +208,7 @@ nav a {
 .error-message-style,
 .submission-fail{
     color: red;
+    margin: 0;
 }
 
 .submission-success{
@@ -239,9 +241,59 @@ a {
     color: black;
 }
 
-a:hover {
+/* https://www.florin-pop.com/blog/2019/03/css-pulse-effect/ */
+.logo h2:hover {
+    /* transform: scale(1.5);
+    transition: transform 1s;
+    transform-style: preserve-3d; */
+    transform: scale(1);
+    animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	70% {
+		transform: scale(0.90);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+nav a:hover {
     text-decoration: underline;
 }
+
+.meal-info-btn:hover {
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+.btn-style:hover,
+.carusel-content a:hover,
+.try-new-content a:hover,
+.blogg-filter-btn-style:hover,
+.blog-section a:hover {
+    filter: drop-shadow(0 10px 3px #00000063);
+}
+
+.search-list-result a:hover {
+    transform: scale(1.1);
+    transition: transform 1s;
+    text-decoration: underline;
+}
+/* .carusel-content h2:hover,
+.try-new-content h2:hover {
+    text-decoration: underline;
+} */
+
+/* a:hover {
+    text-decoration: underline;
+} */
 
 .bold {
     font-weight: bold;
