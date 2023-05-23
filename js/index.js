@@ -68,7 +68,7 @@ async function contentInfo(){
                 
         const postDate = date.toLocaleString("en-GB", options);
 
-        caruselContent.innerHTML += `  <a href="/specific-blog-post.html?id=${postData.id}" class="blog-entry carusel-blog-post" id="carusel-blog-post">
+        caruselContent.innerHTML += `  <a href="/specific-blog-post.html?id=${postData.id}" class="blog-entry">
                                         <img src="${postData._embedded["wp:featuredmedia"][0].source_url}" alt="${postData._embedded["wp:featuredmedia"][0].alt_text}" />
                                         <h2>${postData.title.rendered}</h2>
                                         <p>${postDate}</p>
@@ -134,7 +134,7 @@ async function tryNewRecipes(){
                 
         const postDate = date.toLocaleString("en-GB", options);
 
-            tryNewContent.innerHTML += `  <a href="/specific-blog-post.html?id=${postData.id}" class="try-new carusel-blog-post" id="carusel-blog-post">
+            tryNewContent.innerHTML += `  <a href="/specific-blog-post.html?id=${postData.id}" class="try-new">
                                         <img class="grid-a" src="${postData._embedded["wp:featuredmedia"][0].source_url}" alt="${postData._embedded["wp:featuredmedia"][0].alt_text}" />
                                         <h2 class="grid-b">${postData.title.rendered}</h2>
                                         <h3 class="grid-c post-excerpt">${postData.excerpt.rendered}</h3>

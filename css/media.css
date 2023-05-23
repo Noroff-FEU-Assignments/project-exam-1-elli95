@@ -230,10 +230,7 @@
     }
 
     .about-img-text-combo-style{
-        grid-template-columns: 1fr 1.5fr;
-        /* grid-template-areas:
-        "a b" 
-        "c c"; */
+        flex-direction: row;
     }
 
     .about-img-text-combo-style h2,
@@ -253,6 +250,8 @@
 
     .profile-img {
         clip-path: circle();
+        max-width: 500px;
+        min-width: 300px;
     }
     
     .decore-img {
@@ -396,6 +395,10 @@
 
     .carusel-content-box {
         width: 1280px;
+    }
+
+    .blog-section {
+        grid-template-columns: repeat(4, auto);
     }
 }
 
