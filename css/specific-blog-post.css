@@ -1,5 +1,6 @@
 .specific-blog-post-content,
 .blog-post-content,
+.description-ingredients,
 .comment-form div {
     display: grid;
 }
@@ -20,55 +21,75 @@
     border-radius: 10px;
 }
 
+.modal-section {
+    display: none;
+    position: fixed;
+    padding-top: 100px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--shadow-color);
+}
+
+.modal-img {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.modal-img img{
+    max-width: none;
+}
+
 .date {
     justify-self: end;
     padding-right: 18%;
 }
 
-.post-style {
-    font-size: 1.4rem;
-}
-
 .description-ingredients {
-    display: grid;
-    justify-items: center;
-    padding: 20px 0px 50px 0px;
     grid-template-areas:
     "a" 
     "b" 
     "c";
+    justify-items: center;
+    max-width: 1000px;
+    padding: 20px 0px 50px 0px;
     grid-gap: 30px;
 }
 
 .description-ingredients h2{
+    grid-area: a;  
     font-size: 1.4rem;
     margin: 0px;
-    grid-area: a;  
     font-family: 'Comic Neue', cursive;
 }
 
 .wp-block-table {
-    border: solid 1px black;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    margin: 0px;
     grid-area: b;
     height: fit-content;
-    background-color: white;
+    background-color: var(--standar-white-color);
+    border: solid 1px var(--standar-black-color);
+    border-radius: 5px;
+    font-size: 1.1rem;
+    padding: 10px;
+    margin: 0px;
 }
 
 .description-ingredients ol{
+    grid-area: c;
     font-size: 1.2rem;
     max-width: 800px;
     margin: 0px;
-    grid-area: c;
 }
 
-.description-ingredients {
-    max-width: 1000px;
+.add-comment-titel,
+.comment-form {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
 }
-
 
 .comment-form div {
     grid-template-columns: 1fr;
@@ -84,69 +105,8 @@
     border-radius: 3px;
 }
 
-/* .comment-underline {
-    border-bottom: solid 1px black;
-} */
-
-.modal-section {
-    display: none;
-    position: fixed;
-    padding-top: 100px;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.55);
-    /* display: none;
-    position: fixed; /* Stay in place */
-    /* z-index: 1; Sit on top */
-    /* padding-top: 100px; Location of the box */
-    /* left: 0;
-    top: 0; */
-    /* width: 100%; Full width */
-    /* height: 100%; Full height */
-    /* overflow: auto; Enable scroll if needed */
-    /* background-color: rgba(0,0,0,0.55); */
-}
-
-.modal-img {
-    display: block;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    /* display: flex;
-    justify-content: center;
-    transform: translate(50%, 50%);
-    /* top: 50%; */
-    /* top: 35%; */
-    /* top: 0; */
-    /* right: 50%;
-    position: fixed;  */
-}
-
-
-.modal-img img{
-    /* max-width: 80%;   */
-    /* width: 300px; */
-    max-width: none;
-}
-
-/* .modal-img-style {
-    position: fixed;
-    top: 4%;
-    left: 15%;
-    width: 70%;
-} */
-
 .comment-section {
     max-width: 650px;
-}
-
-.add-comment-titel,
-.comment-form {
-    display: grid;
-    justify-content: center;
-    justify-items: center;
 }
 
 .comment-box {

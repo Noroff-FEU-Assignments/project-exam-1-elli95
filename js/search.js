@@ -7,11 +7,9 @@ import {
 var pageAmount = "&per_page=99";
 
 const allBlogPostBase = apiBase + postBace + postEndpoint + embeddedBase;
-// console.log("hello", allBlogPostBase);
 
 const searchInput = document.querySelector("#search");
 const searchResult = document.querySelector("#search-list-result");
-// const searchResult = document.querySelector("#search-result");
 
 searchInput.addEventListener("input", inputContent);
 document.addEventListener("click", noSearchList);

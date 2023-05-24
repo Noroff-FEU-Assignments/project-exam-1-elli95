@@ -4,12 +4,6 @@ import {
     postEndpoint,
     embeddedBase } from "/js/source.js";
 
-// const apiBase = "https://thecozycookingpot.elisemariehogsnes.no";
-// const postBace = "/wp-json";
-// const postEndpoint = "/wp/v2/posts";
-
-// const apiImgBase = "https://thecozycookingpot.elisemariehogsnes.no/wp-json/wp/v2/media/";
-
 const caruselContent = document.querySelector(".carusel-content");
 
 
@@ -34,7 +28,7 @@ FetchApi();
 
 async function blogPostDate(){
     const apiData = await FetchApi();
-    //Date.prototype.toLocaleString()  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
+    //Reference: Date.prototype.toLocaleString()  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
     let date =  new Date(apiData.date_gmt);
 
     console.log("date", apiData);
@@ -55,9 +49,9 @@ async function contentInfo(){
     const postDate = await blogPostDate();
     console.log("data", apiData);
     caruselContent.innerHTML = "";
-    // var apiData = apiData.length = 12
     Object.values(apiData).forEach(function(postData){
-
+        const caruselBox = document.querySelector(".carusel-content-box");
+        caruselBox.style.justifyContent = "start";
         let date =  new Date(postData.date_gmt);
         
         const options = {
@@ -67,14 +61,12 @@ async function contentInfo(){
         };
                 
         const postDate = date.toLocaleString("en-GB", options);
-
         caruselContent.innerHTML += `  <a href="/specific-blog-post.html?id=${postData.id}" class="blog-entry">
                                         <img src="${postData._embedded["wp:featuredmedia"][0].source_url}" alt="${postData._embedded["wp:featuredmedia"][0].alt_text}" />
                                         <h2>${postData.title.rendered}</h2>
                                         <p>${postDate}</p>
                                         </a>`
     });
-    // innerText
 }
 contentInfo();
 
@@ -87,8 +79,6 @@ async function thisWeeksSpecial(){
 
     console.log("result",result);
     thisWeeksSpecialContent.innerHTML = "";
-    
-    // apiData.length = 4;
 
     Object.values(result).forEach(function(postData){
 

@@ -38,13 +38,11 @@ async function contentInfo(){
         const commentList = apiData._embedded.replies[0];
 
         Object.values(commentList).forEach(function(commentData){
-            // console.log("commentData----commentData", commentData);
             
-            //Date.prototype.toLocaleString()  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
+            //Reference: Date.prototype.toLocaleString()  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
             let date =  new Date(commentData.date);
 
             const options = {
-                // weekday: "long",
                 day: "numeric",
                 month: "long",
                 year: "numeric",
@@ -133,9 +131,7 @@ function emailValidate(email) {
 }
 
 function formSubmission(){
-    // console.log(post);
     if (valueLength(nameInput.value, 1) && emailValidate(emailInput.value) && valueLength(messageInput.value, 1)){
-    // if (valueLength(nameInput.value, 1) && valueLength(messageInput.value, 1)){
         commentSubmissionMessage.innerText = 'Your comment has been submitted.';
         commentSubmissionMessage.classList.add("submission-success");
 
@@ -150,7 +146,6 @@ function formSubmission(){
         fetch(`https://thecozycookingpot.elisemariehogsnes.no/wp-json/wp/v2/comments`, {
                 method: "POST",
                 headers: {"content-Type": "application/json",},
-                // body: CommentPost,
                 body: JSON.stringify(CommentPost),
             })
             .then(response => response.json())
@@ -161,20 +156,9 @@ function formSubmission(){
             setTimeout(() => {
                 contentInfo();
             }, 500);
-            
-            updateComments();
-        
-    
     }
     else {
         commentSubmissionMessage.innerText = 'Your comment does not meet the requirement. Correct the errors and try again.';
         commentSubmissionMessage.classList.add("submission-fail");
     }
-}
-// contentInfo();
-function updateComments(){
-    // UpdateDelay(() => {
-    // setTimeout(() => {
-    //     console.log("Hello World!");
-    //   }, 500);
 }

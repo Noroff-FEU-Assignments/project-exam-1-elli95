@@ -17,11 +17,11 @@ header {
     display: grid;
     grid-template-areas: "b a c";
     justify-content: space-between;
+    align-items: center;
     position: fixed;
+    background-color: var(--menu-standar-color);
     top: 0px;
     width: 100%;
-    align-items: center;
-    background-color: var(--menu-standar-color);
     padding: 5px 10px;
     z-index: 5;
 }
@@ -35,101 +35,11 @@ header {
     font-size: 1.9rem;
 }
 
-.search-list-result {
-    display: grid;
-    justify-content: center;
-    position: absolute;
-    /* z-index: 5; */
-    background-color: var(--menu-dropdown-color);
-    width: 100%;
-    padding: 10px 0px;
-    /* z-index: 1; */
-    left: 0;
-    top: 103px;
-    max-height: 645px;
-    overflow: scroll;
-}
-
-.search-list-products img {
-    border-radius: 15px;
-    object-fit: cover;
-    object-position: center;
-    width: 100px;
-    height: 70px;
-}
-
-.search-list-products{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    padding: 7px;
-}
-
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* padding: 10px 0px 20px 0px; */
-    padding: 20px 0px 40px 0px;
-    background-color: var(--menu-standar-color); 
-    justify-content: center;   
-}
-
-footer form {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-footer label {
-    font-size: 1.4rem;
-}
-
-footer input {
-    margin: 5px;
-    border-radius: 5px;
-}
-
-footer div {
-    width: auto;
-}
-
-.sign-up-btn {
-    font-size: 1.2rem;
-    border-radius: 5px;
-    padding: 7px 10px;
-}
-
-.main-content {
-    padding-top: 65px;
-    background-color: #F4D5B4;
-    font-family: 'Comic Neue', cursive;
-}
-
-h1 {
-    font-family: 'Noto Serif', serif;
-}
-
-.main-content h2 {
-    font-weight: normal;
-    font-family: 'Noto Serif', serif;
-    margin-bottom: 0;
-}
-
-/* reference: https://blog.pope.tech/2020/02/28/missing-form-label-search/ */
-.wave-form-lable-fix {
-    overflow: hidden;
-    left: -99999999px;
-    position: absolute;
-    top: auto;
-}
-
 /* nav */
-footer,
-nav,
-.search form,
-.searchbar-input {
-    font-family: 'Sriracha', cursive;
+.nav-section {
+    background-color: var(--menu-standar-color);
+    padding: 10px;
+    font-size: 2rem;
 }
 
 nav,
@@ -137,12 +47,6 @@ nav,
 #dropdown-searchbar,
 .search form {
     display: none;
-}
-
-.nav-section {
-    background-color: var(--menu-standar-color);
-    padding: 10px;
-    font-size: 2rem;
 }
 
 #dropdown-menu:checked ~ nav {
@@ -169,7 +73,7 @@ nav a {
     justify-content: center;
 }
 
-/* Searchbar */
+/* Search */
 
 .search {
     display: flex;
@@ -198,6 +102,122 @@ nav a {
     font-size: 1rem;
     padding-left: 7px;
 }
+
+.search-list-result {
+    display: grid;
+    justify-content: center;
+    position: absolute;
+    overflow: scroll;
+    background-color: var(--menu-dropdown-color);
+    left: 0;
+    top: 103px;
+    width: 100%;
+    max-height: 645px;
+    padding: 10px 0px;
+}
+
+.search-list-products{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 7px;
+    font-family: 'Noto Serif', serif;
+}
+
+.search-list-products img {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    width: 100px;
+    height: 70px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+    background-color: var(--menu-standar-color); 
+    padding: 20px 0px 40px 0px;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer label {
+    font-size: 1.4rem;
+}
+
+footer input {
+    margin: 5px;
+    border-radius: 5px;
+}
+
+footer div {
+    width: auto;
+}
+
+/* Page Content */
+.main-content {
+    padding-top: 65px;
+    background-color: var(--menu-dropdown-color);
+    font-family: 'Comic Neue', cursive;
+    min-height: 100vh;
+}
+
+h1 {
+    font-family: 'Noto Serif', serif;
+}
+
+.main-content h2 {
+    font-weight: normal;
+    font-family: 'Noto Serif', serif;
+    margin-bottom: 0;
+}
+
+
+.blog-entry,
+.try-new {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    background-color: var(--standar-white-color);
+    border: solid 3px var(--standar-black-color);
+    border-radius: 10px;
+    width: min-content;
+}
+
+
+.blog-entry img,
+.try-new img {
+    object-fit: cover;
+    object-position: center;
+    padding: 10px;
+}
+
+.blog-entry h2 {
+    margin: 0px;
+    justify-self: center;
+    text-align: center;
+}
+
+.blog-entry p {
+    margin: 0px;
+    text-align: end;
+    padding: 3px 15px 5px 0px;
+}
+
+/* reference: https://blog.pope.tech/2020/02/28/missing-form-label-search/ */
+.wave-form-lable-fix {
+    overflow: hidden;
+    left: -99999999px;
+    position: absolute;
+    top: auto;
+}
+
 
 /* validation styles */
 .error-message-style {
@@ -228,72 +248,23 @@ nav a {
     padding: 5px 20px;
     margin-top: 15px;
     text-transform: uppercase;
-    background-color: #42e813;
-    border: solid 1px black;
+    background-color: var(--button-color);
+    border: solid 1px var(--standar-black-color);
     border-radius: 7px;
     font-weight: bold;
 }
 
 /* Font edits: */
 
+header,
+footer {
+    font-family: 'Sriracha', cursive;
+}
+
 a {
     text-decoration: none;
-    color: black;
+    color: var(--standar-black-color);
 }
-
-/* https://www.florin-pop.com/blog/2019/03/css-pulse-effect/ */
-.logo h2:hover {
-    /* transform: scale(1.5);
-    transition: transform 1s;
-    transform-style: preserve-3d; */
-    transform: scale(1);
-    animation: pulse 2.5s infinite;
-}
-
-@keyframes pulse {
-	0% {
-		transform: scale(1);
-	}
-
-	70% {
-		transform: scale(0.90);
-	}
-
-	100% {
-		transform: scale(1);
-	}
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-.meal-info-btn:hover {
-    transform: scale(1.1);
-    transition: transform 1s;
-}
-
-.btn-style:hover,
-.carusel-content a:hover,
-.try-new-content a:hover,
-.blogg-filter-btn-style:hover,
-.blog-section a:hover {
-    filter: drop-shadow(0 10px 3px #00000063);
-}
-
-.search-list-result a:hover {
-    transform: scale(1.1);
-    transition: transform 1s;
-    text-decoration: underline;
-}
-/* .carusel-content h2:hover,
-.try-new-content h2:hover {
-    text-decoration: underline;
-} */
-
-/* a:hover {
-    text-decoration: underline;
-} */
 
 .bold {
     font-weight: bold;
@@ -320,11 +291,38 @@ nav a:hover {
     grid-area: e;
 }
 
-.grid-f {
-    grid-area: e;
+/* Hover effects and animations*/
+.logo h2:hover {
+    transform: scale(0.90);
+    transition: transform 2s ease-in-out;
+    filter: drop-shadow(0 10px 3px var(--shadow-color));
 }
 
-/*animation*/
+nav a:hover {
+    text-decoration: underline;
+}
+
+.search-list-result a:hover {
+    transform: scale(1.1);
+    transition: transform 1s;
+    text-decoration: underline;
+}
+
+.btn-style:hover,
+.carusel-content a:hover,
+.try-new-content a:hover,
+.blogg-filter-btn-style:hover,
+.blog-section a:hover {
+    filter: drop-shadow(0 10px 3px var(--shadow-color));
+}
+
+.meal-info-btn:hover {
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+/* Reference: Previous assignment line 491
+  https://github.com/elli95/HTML-and-CSS_CA_Elise-Marie-Hogsnes/blob/main/css/styles.css */
 .loading {
     display: flex;
     justify-self: center;
@@ -335,7 +333,6 @@ nav a:hover {
     height: 100px;
     animation: spinner 8s linear infinite;
 }
-
 
 @keyframes spinner {
     0% {

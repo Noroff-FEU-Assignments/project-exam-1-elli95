@@ -23,12 +23,12 @@
 
 /* Reference: How to add border in my clip-path: polygon(); CSS style - Reply from: Robert Máslo - https://stackoverflow.com/questions/31854185/how-to-add-border-in-my-clip-path-polygon-css-style */
 .profile-img-border {
-    filter:     drop-shadow(2px 0px 0px white)
-                drop-shadow(0px 2px 0px white)
-                drop-shadow(2px 2px 0px white)
-                drop-shadow(-2px 0px 0px white)
-                drop-shadow(0px -2px 0px white)
-                drop-shadow(-2px -2px 0px white);
+    filter:     drop-shadow(2px 0px 0px var(--standar-white-color))
+                drop-shadow(0px 2px 0px var(--standar-white-color))
+                drop-shadow(2px 2px 0px var(--standar-white-color))
+                drop-shadow(-2px 0px 0px var(--standar-white-color))
+                drop-shadow(0px -2px 0px var(--standar-white-color))
+                drop-shadow(-2px -2px 0px var(--standar-white-color));
     padding: 20px;
 }
 

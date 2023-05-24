@@ -8,13 +8,14 @@ form,
     justify-content: center;
 }
 
+.contact img {
+    display: none;
+}
+
 .contact-form{
     padding: 20px;
 }
 
-.contact img {
-    display: none;
-}
 
 .contact-form h1 {
     font-size: 1.7rem;
@@ -28,14 +29,13 @@ form,
     font-family: 'Comic Neue', cursive;
 }
 
-form
-/* .contact-btn-style  */{
+form label {
     font-weight: bold;
 }
 
 .form-style{
     grid-template-columns: 1fr;
-    max-width: 300px;
+    width: 250px;
     font-size: 1.2rem;
 }
 
@@ -43,35 +43,3 @@ form
 textarea{
     border-radius: 3px;
 }
-
-/* .btn-style {
-    padding: 5px 20px;
-    margin-top: 15px;
-    text-transform: uppercase;
-    background-color: #42e813;
-    border: solid 1px black;
-    border-radius: 7px;
-} */
-
-
-/* .error-message-style {
-    display: none;
-    text-align: center;
-}
-
-.error-message-style,
-.submission-fail{
-    color: red;
-}
-
-.submission-success{
-    color: #0d6a0d;
-}
-
-.submission-success,
-.submission-fail{
-    text-align: center;
-    width: 300px;
-    padding-top: 20px;
-    font-size: 1.3rem;
-} */

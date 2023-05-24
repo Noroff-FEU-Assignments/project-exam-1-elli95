@@ -12,13 +12,10 @@ const productId = params.get("id");
 
 const blogPostBase = apiBase + postBace + postEndpoint + productId + embeddedBase ;
 
-// console.log("url info123123123", blogPostBase);
-
 async function FetchApi(){
     try{
         const response = await fetch(blogPostBase);
         const data = await response.json();
-        // console.log("url info", data);
         return data;
     }
     catch (error) {
@@ -32,14 +29,12 @@ FetchApi();
 
 async function contentInfo(){
     const apiData = await FetchApi();
-    // console.log("data123", apiData);
     pageContent.innerHTML = "";
 
-    //Date.prototype.toLocaleString()  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
+    //Reference: Date.prototype.toLocaleString()  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
     let date =  new Date(apiData.date_gmt);
 
     const options = {
-        // weekday: "long",
         day: "numeric",
         month: "long",
         year: "numeric",
@@ -67,28 +62,6 @@ async function contentInfo(){
 }
 contentInfo();
 
-// window.addEventListener("load", (event) => {
-//     getImages();
-// });
-
-// function getImages(){
-//       setTimeout(() => {  
-//     //   const pageImg = document.getElementsByTagName("img");
-//       const pageImg = document.querySelectorAll("img");
-//       console.log("pageImg",pageImg);
-//       for(var i = 0; i <= pageImg.length; i++){
-//             pageImg[i].addEventListener("click", biggerImg);
-//           console.log("pageImg1----",pageImg[i]);
-//         //   if (window.addEventListener) {
-//         //     //   console.log("pageImg2----",pageImg[i]);
-//         //     //   pageImg[i].addEventListener("click", biggerImg);
-//         //   }
-//       }
-//       }, 500);
-// }
-
-
-
 async function biggerImg(){
     
     let postImg = this;   
@@ -97,64 +70,11 @@ async function biggerImg(){
     const modalImg = document.querySelector(".modal-img");
     
     modalSection.style.display = "block";
-    modalImg.innerHTML = `<img class="modal-img-style" src="${postImg.src}" alt="${postImg.alt}" />`
+    modalImg.innerHTML = `<img src="${postImg.src}" alt="${postImg.alt}" />`
 
     document.onclick = function(event) {
         if (event.target === modalSection) {
             modalSection.style.display = "none";
         }
     }
-    // document.addEventListener("click");
-    // if (document.addEventListener("click")){  
-    //     modalSection.style.display = "none";
-    // }
-
 }
-
-// document.addEventListener("click", noModal);
-
-// function noModal(){
-//     console.log("dgbnaspdnvsdnvaudhbsdvmsd");
-// //     modalSection.style.display = "none";
-// }
-
-
-      // // const pageImg = document.querySelector("#post-image");
-      // pageImg.addEventListener("click", biggerImg);
-  
-      // const images = document.querySelectorAll("img");
-  
-          // pageImg[i].addEventListener("click", biggerImg);
-
-    //   const pageImg = document.getElementsByTagName("img");
-      
-      // console.log("pageImg",images);
-
-// pageImg.addEventListener("click", biggerImg);
-
-// async function main(){
-//     const apiData = await FetchApi();
-//     createHTML(apiData);
-// }
-// main()
-
-// function createHTML(apiData){
-
-//     const title = document.createElement("h1");
-//     title.innerText = apiData.title.rendered;
-//     pageContent.append(title);
-
-//     const image = document.createElement("img");
-//     image.innerText = apiData._embedded["wp:featuredmedia"][0].source_url;
-//     pageContent.append(image);
-
-//     const date = document.createElement("p");
-//     date.innerText = apiData.date_gmt;
-//     date.classList.add("date");
-//     pageContent.append(date);
-
-//     const postContent = document.createElement("div");
-//     postContent.innerHTML = apiData.content.rendered;
-//     postContent.classList.add("description-ingredients");
-//     pageContent.append(postContent);
-// }

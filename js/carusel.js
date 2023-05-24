@@ -1,18 +1,15 @@
 const blogSection = document.querySelector(".blog-carousel-section");
 const caruselContent = document.querySelector(".carusel-content-box");
 const blogPostContainer = document.querySelectorAll(".carusel-content");
-// const blogEntry = document.querySelectorAll("#carusel-blog-post");
 
 const arrowLeft = document.querySelector(".arrow-left");
 const arrowRight = document.querySelector(".arrow-right");
 
 arrowLeft.addEventListener("click",lastEntryRow);
-// arrowLeft.addEventListener("touchstart",lastEntryRow);
 
 arrowRight.addEventListener("click",nextEntryRow);
 
 const entrySize = caruselContent.clientWidth;
-// const entrySize = caruselContent.style.width;
 console.log(entrySize)
 
 // Reference: How To Make An Infinite Image Slider That Loops with HTML CSS and JavaScript  https://www.youtube.com/watch?v=wjC8iGt67UE
@@ -32,17 +29,12 @@ function lastEntryRow (){
         console.log("hello2y",blogPostContainer[i]);
         if(clicks === -1 || clicks === 2 ){
             clicks = 2;
-            // blogPostContainer[i].style.transform = `translateX(-3380px)`;
             blogPostContainer[i].style.transform = `translateX(${-entrySize * 2}px)`;
             blogPostContainer[i].style.transition = "300ms ease-in-out transform";
-            // blogEntry.style.transform = `translateX(-3380px)`;
-            // blogEntry.style.transition = "300ms ease-in-out transform";
             navSymbolChange (); 
             console.log("hello",clicks);
         }
         else{
-            // blogEntry[i].style.transform = `translateX(${entrySize - leftArrowClick}px)`;
-            // blogEntry[i].style.transition = "300ms ease-in-out transform";
             blogPostContainer[i].style.transform = `translateX(${entrySize - leftArrowClick}px)`;
             blogPostContainer[i].style.transition = "300ms ease-in-out transform";
             console.log("click <-", clicks);
@@ -77,27 +69,27 @@ const carouselNavSymbols3 = document.querySelector(".nav-btn-3");
 
 function navSymbolChange () {
     if(clicks === 0){
-        carouselNavSymbols1.style.backgroundColor = "lightgray";
-        carouselNavSymbols1.style.border = "solid 1px black";
+        carouselNavSymbols1.style.backgroundColor = "var(--carousel-nav-symbols-selected)";
+        carouselNavSymbols1.style.border = "solid 1px var(--standar-black-color)";
     }
     else{
-        carouselNavSymbols1.style.backgroundColor = "gray";
+        carouselNavSymbols1.style.backgroundColor = "var(--carousel-nav-symbols-not-selected)";
         carouselNavSymbols1.style.border = "none";
     }
     if(clicks === 1){
-        carouselNavSymbols2.style.backgroundColor = "lightgray";
-        carouselNavSymbols2.style.border = "solid 1px black";
+        carouselNavSymbols2.style.backgroundColor = "var(--carousel-nav-symbols-selected)";
+        carouselNavSymbols2.style.border = "solid 1px var(--standar-black-color)";
     }
     else{
-        carouselNavSymbols2.style.backgroundColor = "gray";
+        carouselNavSymbols2.style.backgroundColor = "var(--carousel-nav-symbols-not-selected)";
         carouselNavSymbols2.style.border = "none";
     }
     if(clicks === 2){
-        carouselNavSymbols3.style.backgroundColor = "lightgray";
-        carouselNavSymbols3.style.border = "solid 1px black";
+        carouselNavSymbols3.style.backgroundColor = "var(--carousel-nav-symbols-selected)";
+        carouselNavSymbols3.style.border = "solid 1px var(--standar-black-color)";
     }
     else{
-        carouselNavSymbols3.style.backgroundColor = "gray";
+        carouselNavSymbols3.style.backgroundColor = "var(--carousel-nav-symbols-not-selected)";
         carouselNavSymbols3.style.border = "none";
     }
 }
