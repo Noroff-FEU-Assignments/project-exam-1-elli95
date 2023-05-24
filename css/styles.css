@@ -87,7 +87,7 @@ nav a {
 #dropdown-searchbar:checked ~ form {
     display: flex;
     justify-content: center;
-    background-color: var(--menu-dropdown-color);
+    background-color: var(--menu-standar-color);
     position: absolute;
     top: 68px;
     left: 0px;
@@ -108,7 +108,7 @@ nav a {
     justify-content: center;
     position: absolute;
     overflow: scroll;
-    background-color: var(--menu-dropdown-color);
+    background-color: var(--menu-standar-color);
     left: 0;
     top: 103px;
     width: 100%;
