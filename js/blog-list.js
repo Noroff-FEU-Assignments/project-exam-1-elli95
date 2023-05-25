@@ -41,6 +41,7 @@ async function contentInfo(){
         
         ViewMoreBtn.style.display = "block";
         pageContent.innerHTML = "";
+        pageContent.style.gap= "30px";
 
         blogListPostStyle(apiResult);
     }
