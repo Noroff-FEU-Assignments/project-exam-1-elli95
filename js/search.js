@@ -1,12 +1,6 @@
-import {
-    apiBase,
-    postBace,
-    postEndpoint,
-    embeddedBase } from "/js/source.js";
+import {apiUrlPosts, emailValidate} from "/js/source.js";
 
 var pageAmount = "&per_page=99";
-
-const allBlogPostBase = apiBase + postBace + postEndpoint + embeddedBase;
 
 const searchInput = document.querySelector("#search");
 const searchResult = document.querySelector("#search-list-result");
@@ -16,15 +10,12 @@ document.addEventListener("click", noSearchList);
 
 async function inputContent(inputText){
         try{
-            const response = await fetch(allBlogPostBase + pageAmount);
+            const response = await fetch(apiUrlPosts + pageAmount);
             const data = await response.json();
-            console.log("url info", data);
     
             const value = inputText.target.value.toLowerCase();
-            console.log("value",value);
     
             let result = data.filter(blogPost => blogPost.title.rendered.toLowerCase().includes(value));
-            console.log(result);
             searchResultsList(result)
         }
         catch (error) {
@@ -49,7 +40,7 @@ function noSearchList(){
     searchResult.classList.remove("search-list-result");
 }
 
-
+// Subscribe validation //
 const email = document.querySelector("#subscribe-newsletter");
 const emailError = document.querySelector("#subscribe-error-email");
 
@@ -77,17 +68,13 @@ function subscribeFormFormValidator(event){
     }
 }
 
-//Reference: function structure from https://content.noroff.dev/javascript-1/form-validation.html#regular-expressions
-//Reference: Email address validation pattern from https://regexr.com/3e48o
-function emailValidate(email) {
-    const emailPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-    const emailPatternCheck = emailPattern.test(email);
-    return emailPatternCheck;
-}
-
 function formSubmission(){
     if (emailValidate(email.value)){
-        formMessageSubmission.innerText = 'Thank you for joining our subscription.';
+        formMessageSubmission.innerHTML = '<i class="fa-solid fa-circle-check"><span class="wave-form-lable-fix">Submission success</span></i> Thank you for joining our subscription.';
         formMessageSubmission.classList.add("submission-success");
+    }
+    else {
+        formMessageSubmission.innerHTML = '<i class="fa-solid fa-triangle-exclamation"><span class="wave-form-lable-fix">Error</span></i> Please enter a valid email.';
+        formMessageSubmission.classList.add("submission-fail");
     }
 }

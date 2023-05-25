@@ -35,10 +35,7 @@
     font-weight: bold;
 }
 
-.x-mark-breakfast,
-.x-mark-lunch, 
-.x-mark-dinner, 
-.x-mark-dessert  {
+.x-mark  {
     display: none;
     cursor: pointer;
 }

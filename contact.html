@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/contact.css" />
     <link rel="stylesheet" href="css/media.css" />
-    <script src="js/contact.js" defer></script>
+    <script type="module" src="js/contact.js"></script>
     <script type="module" src="js/search.js"></script>
     <!-- Hotjar Tracking Code for The Cozy Cooking Pot -->
     <script>
@@ -80,22 +80,32 @@
               <div class="form-style">
                 <label for="name">Name:</label>
                 <input type="text" name="name" id="name" />
-                <div class="error-message-style" id="error-name">Please enter your name, It must consist of 5 characters.</div>
+                <div class="error-message-style" id="error-name">
+                  <i class="fa-solid fa-triangle-exclamation"><span class="wave-form-lable-fix">Error</span></i>
+                  Please enter your name, It must consist of 5 characters.
+                </div>
               </div>
               <div class="form-style">
                 <label for="email">Email address:</label>
                 <input type="text" name="email" id="email" />
-                <div class="error-message-style" id="error-email">Please enter a valid email.</div>
+                <div class="error-message-style" id="error-email">
+                  <i class="fa-solid fa-triangle-exclamation"><span class="wave-form-lable-fix">Error</span></i>
+                  Please enter a valid email.
+                </div>
               </div>
               <div class="form-style">
                 <label for="subject">Subject:</label>
                 <input type="text" name="subject" id="subject" />
-                <div class="error-message-style" id="error-subject">Please enter a valid subject, It must consist of 15 characters.</div>
+                <div class="error-message-style" id="error-subject">
+                  <i class="fa-solid fa-triangle-exclamation"><span class="wave-form-lable-fix">Error</span></i>
+                  Please enter a valid subject, It must consist of 15 characters.
+                </div>
               </div>
               <div class="form-style">
                 <label for="message">Message:</label>
                 <textarea name="message" id="message" cols="30" rows="3"></textarea>
                 <div class="error-message-style" id="error-message-field">
+                  <i class="fa-solid fa-triangle-exclamation"><span class="wave-form-lable-fix">Error</span></i>
                   Please write some text about the situation you need help with, so we can assist you more easily. It must consist of 25 characters.
                 </div>
               </div>
@@ -114,7 +124,7 @@
         <input type="text" name="email" id="subscribe-newsletter" />
         <input type="submit" value="Submit" class="btn-style" />
       </form>
-      <div class="error-message-style" id="subscribe-error-email">Please enter a valid email.</div>
+      <div class="error-message-style" id="subscribe-error-email"></div>
       <div id="subscribe-error-message"></div>
       <div id="subscribe-form-message-submission"></div>
     </footer>

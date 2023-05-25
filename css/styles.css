@@ -227,12 +227,18 @@ h1 {
 
 .error-message-style,
 .submission-fail{
-    color: red;
+    text-align: start;
     margin: 0;
 }
 
-.submission-success{
-    color: #0d6a0d;
+
+
+.fa-triangle-exclamation {
+    color: #9C0000;
+}
+
+.fa-circle-check{
+    color: #0B590B;
 }
 
 .submission-success,

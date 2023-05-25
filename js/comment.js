@@ -1,53 +1,25 @@
 import {
-    apiBase,
-    postBace,
-    commentEndpoint,
-    postEndpoint,
-    embeddedBase } from "/js/source.js";
+    emailValidate,
+    valueLength,
+    getApiFromId } from "/js/source.js";
 
 const pageContent = document.querySelector(".comment-section");
 
-const queryString = document.location.search;
-const params = new URLSearchParams(queryString);
-const productId = params.get("id");
-
-const blogPostBase = apiBase + postBace + postEndpoint + productId + embeddedBase ;
-
-
-async function FetchApi(){
-    try{
-        const response = await fetch(blogPostBase);
-        const data = await response.json();
-        console.log("url info", data);
-        return data;
-    }
-    catch (error) {
-        console.log(error);
-        pageContent.innerHTML = error;
-    }
-}
-FetchApi();
-
-
 async function contentInfo(){
-    const apiData = await FetchApi();
-    console.log("data123", apiData);
+    const apiData = await getApiFromId();
     pageContent.innerHTML = "";
 
     if(apiData._embedded.replies){
         const commentList = apiData._embedded.replies[0];
 
         Object.values(commentList).forEach(function(commentData){
-            
             //Reference: Date.prototype.toLocaleString()  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
-            let date =  new Date(commentData.date);
-
             const options = {
                 day: "numeric",
                 month: "long",
                 year: "numeric",
             };
-            
+            let date =  new Date(commentData.date);
             const commentDate = date.toLocaleString("en-GB", options);
 
             pageContent.innerHTML += `  <div class="comment-box">
@@ -59,9 +31,7 @@ async function contentInfo(){
     }
     else{
         pageContent.innerHTML += `<h2>Be the first to add a new comment!</h2>`
-        console.log("there is no comment");
     }
-    
 }
 contentInfo();
 
@@ -113,26 +83,9 @@ function commentFormValidator(event){
     }
 }
 
-function valueLength(value, inputLength){
-    if (value.trim().length >= inputLength){
-        return true;
-    } 
-    else {
-        return false;
-    }
-}
-
-//Reference: function structure from https://content.noroff.dev/javascript-1/form-validation.html#regular-expressions
-//Reference: Email address validation pattern from https://regexr.com/3e48o
-function emailValidate(email) {
-    const emailPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-    const emailPatternCheck = emailPattern.test(email);
-    return emailPatternCheck;
-}
-
 function formSubmission(){
     if (valueLength(nameInput.value, 1) && emailValidate(emailInput.value) && valueLength(messageInput.value, 1)){
-        commentSubmissionMessage.innerText = 'Your comment has been submitted.';
+        commentSubmissionMessage.innerHTML = '<i class="fa-solid fa-circle-check"><span class="wave-form-lable-fix">Submission success</span></i> Your comment has been submitted.';
         commentSubmissionMessage.classList.add("submission-success");
 
         const CommentPost = { 
@@ -158,7 +111,7 @@ function formSubmission(){
             }, 500);
     }
     else {
-        commentSubmissionMessage.innerText = 'Your comment does not meet the requirement. Correct the errors and try again.';
+        commentSubmissionMessage.innerHTML = '<i class="fa-solid fa-triangle-exclamation"><span class="wave-form-lable-fix">Error</span></i> Your comment does not meet the requirement. Correct the errors and try again.';
         commentSubmissionMessage.classList.add("submission-fail");
     }
 }
