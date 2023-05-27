@@ -234,11 +234,11 @@ h1 {
 
 
 .fa-triangle-exclamation {
-    color: #9C0000;
+    color: var(--error-color);
 }
 
 .fa-circle-check{
-    color: #0B590B;
+    color: var(--success-color);
 }
 
 .submission-success,

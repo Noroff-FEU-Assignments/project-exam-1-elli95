@@ -7,4 +7,6 @@
     --shadow-color: #00000080;
     --carousel-nav-symbols-selected: lightgray;
     --carousel-nav-symbols-standard: gray;
+    --error-color: #9C0000;
+    --success-color: #0B590B;
 }
