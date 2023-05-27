@@ -1,67 +1,57 @@
 ## Project Exam 1
 
-## Goal
+This is the Project Exam 1 (spring 2023) by Elise Marie Hogsnes, from the August 2022 frontend development class, Noroff. This project shows my blog The Cozy Cooking Pot.
 
-To put into practice the skills learned over your first year of studies.
+# Description
 
-## Brief
-You have been tasked with creating a blog site. You can choose the design and topics covered on the blog, but it should have at least the following pages:
--	Home page
--	About page
--	List of blog posts
--	Blog post specific pages
--	Contact page.
+This project is a food blog that contains a main page, a blog list page, a specific blog page, an about us page and a contact page.
+It contains several different blog posts, where you can sort, search and look through the different posts.
+It is also possible to add comments to the various blog posts, and you can read more about the fictitious owner.
+You can also use a contact form, but you probably won't get many answers anytime soon.
 
-### Home Page
-The home page should have a ‘Latest Posts’ section which uses a carousel (slider) for users to click to view more posts. For example, by default the user can see four posts, then they can click an arrow on the right to view the next four posts, and click it again to view the next four posts. The user can also click back to view results they had previously seen. This must be implemented for desktop at least, but if you want a simpler layout for mobile, you can change it from being in a carousel.
+# Reference:
 
-### Blog Page
+My Figma Prototype:
 
-The blog posts page should show the first 10 blogs, and the user should click to view more results which then show underneath the first 10 blogs.
+Desktop: https://www.figma.com/file/d2TbYrpXCsCdspQe4iZ1Yz/blogg?type=design&node-id=0%3A1&t=Di6mPfUtCp0jQUmS-1
 
-### Blog Specific Page
+Mobile: https://www.figma.com/file/d2TbYrpXCsCdspQe4iZ1Yz/blogg?type=design&node-id=106%3A67&t=Di6mPfUtCp0jQUmS-1
 
-The content of the blog specific page should be dynamically built using a query string parameter based on whatever link the user clicked. The title of the blog specific page should change based on the blog that has been clicked on e.g. “My Blog | An Article I Wrote”.
+All images used were taken from https://unsplash.com/
+All image editing was done with paint.net and FastStone Photo Resizer.
 
-If images on the blog post page are clicked, a modal should appear giving the user a bigger view of that image. Clicking outside the image should hide the modal.
+Icons were sourced from https://fontawesome.com/
 
-### Contact page
+Font type:
 
-Create a contact us page, there should be 4 textboxes on this page.
--	Name (Should be more than 5 characters long)
--	Email address (Must be a valid email address)
--	Subject (Should be more than 15 characters long)
--	Message content (Should be more than 25 characters long)
+- Dancing Script: https://fonts.google.com/specimen/Dancing+Script?category=Handwriting
+- Comic Neue: https://fonts.google.com/specimen/Comic+Neue
+- Sriracha: https://fonts.google.com/specimen/Sriracha?category=Handwriting
 
-Please use JavaScript for validation, show error messages if the values in the textboxes do not meet the requirements.
+Inspiration and information used in this project came from Noroff's curriculum and various websites linked below.
 
-### WordPress
+- Function structure from: https://content.noroff.dev/javascript-1/form-validation.html#regular-expressions
+- Email address validation pattern from: https://regexr.com/3e48o
+- Date.prototype.toLocaleString(): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
+- Fisher–Yates Shuffle: https://bost.ocks.org/mike/shuffle/
+- How To Make An Infinite Image Slider That Loops with HTML CSS and JavaScript: https://www.youtube.com/watch?v=wjC8iGt67UE
+- JavaScript Post Request – How to Send an HTTP Post Request in JS: https://www.freecodecamp.org/news/javascript-post-request-how-to-send-an-http-post-request-in-js/
+- Missing Form Label – Site Search example: https://blog.pope.tech/2020/02/28/missing-form-label-search/
+- HTML-and-CSS_CA_Elise-Marie-Hogsnes – css – styles: https://github.com/elli95/HTML-and-CSS_CA_Elise-Marie-Hogsnes/blob/main/css/styles.css
+- How to add border in my clip-path: polygon(); CSS style - Reply from: Robert Máslo: https://stackoverflow.com/questions/31854185/how-to-add-border-in-my-clip-path-polygon-css-style
 
-The content for your website will be stored on a WordPress installation used as a Headless CMS. It’s important to note that we are only using WordPress to provide an API and add content for the blog. You should not submit a link to a WordPress site, but build your website using HTML, CSS and JavaScript and making a call to the WordPress REST API to fetch the data. 
+# Website link:
 
-The project has two aspects:
--	API from your WordPress installation
--	Your website built with HTML, CSS and JavaScript
+- https://tourmaline-horse-b596b3.netlify.app/index.html
 
-You will need to add at least 12 blogs for your website. You can use lorem ipsum for paragraphs if you need, but headings, images etc. should all make sense.
+# Api hosted by:
 
-Note that this is an exam, and therefore tutor support will be limited as per the study plan.
+- https://www.one.com/en/
 
-## Level 1 Process
+# GitHub repository:
 
-1.	Decide on the theme for the blog you’re going to make
-2.	Create a prototype of the website
-3.	Install WordPress on your web host and add the blogs on the admin panel. 
-4.	Use the GitHub repo created by GitHub Classroom for your files and deploy to Netlify
-5.	Build your website using HTML, CSS and JavaScript making a call to the WordPress REST API to fetch your data.
-6.	Install Hotjar on your website.
-7.	Ask users to test your website, and adjust based on their feedback and any insights from Hotjar.
-8.	Write a report documenting your project (template provided in this repository).
-9.	Submit your report as a PDF and a link to both your Netlify deployment and your GitHub repo.
- 
-## Level 2 Process (optional)
+- https://github.com/Noroff-FEU-Assignments/project-exam-1-elli95/
 
-1.	You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for. 
-2.	Post the data from the contact form to WordPress so you have the details saved.
-3.	Allow users to submit comments on a blog post, and post this data to WordPress
+# Authors
 
+Elise Marie Hogsnes
