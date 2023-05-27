@@ -1,7 +1,8 @@
 .introduction,
 .introduction h1 {
-    display: grid;
+    display: flex;
     justify-items: center;
+    justify-content: center;
 }
 
 .introduction-img {  

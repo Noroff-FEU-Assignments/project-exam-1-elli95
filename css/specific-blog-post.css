@@ -46,6 +46,7 @@
 .date {
     justify-self: end;
     padding-right: 18%;
+    width: auto;
 }
 
 .description-ingredients {
