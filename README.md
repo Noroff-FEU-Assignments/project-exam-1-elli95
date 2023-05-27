@@ -52,6 +52,6 @@ Inspiration and information used in this project came from Noroff's curriculum a
 
 - https://github.com/Noroff-FEU-Assignments/project-exam-1-elli95/
 
-# Authors
+# Author
 
 Elise Marie Hogsnes
