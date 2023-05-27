@@ -95,7 +95,7 @@ function formSubmission(){
                 content: messageInput.value,
             };
         
-        //JavaScript Post Request – How to Send an HTTP Post Request in JS  https://www.freecodecamp.org/news/javascript-post-request-how-to-send-an-http-post-request-in-js/
+        //Reference: JavaScript Post Request – How to Send an HTTP Post Request in JS  https://www.freecodecamp.org/news/javascript-post-request-how-to-send-an-http-post-request-in-js/
         fetch(`https://thecozycookingpot.elisemariehogsnes.no/wp-json/wp/v2/comments`, {
                 method: "POST",
                 headers: {"content-Type": "application/json",},

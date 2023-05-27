@@ -1,4 +1,5 @@
-.blog-list-content {
+.blog-list-content,
+.blog-section {
     display: grid;
     justify-content: center;
     justify-items: center;
@@ -41,9 +42,7 @@
 }
 
 .blog-section {
-    display: grid;
     grid-template-rows: auto;
-    justify-content: center;
     align-items: center;
     padding: 50px 0px;  
 }

@@ -27,7 +27,7 @@ async function getApiFromId(){
 
 // Email and input validation //
 
-//Reference: function structure from https://content.noroff.dev/javascript-1/form-validation.html#regular-expressions
+//Reference: Function structure from https://content.noroff.dev/javascript-1/form-validation.html#regular-expressions
 //Reference: Email address validation pattern from https://regexr.com/3e48o
 function emailValidate(email) {
     const emailPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;

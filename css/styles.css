@@ -52,7 +52,7 @@ nav,
 #dropdown-menu:checked ~ nav {
     display: table;
     justify-content: center;
-    background-color: var(--menu-dropdown-color);
+    background-color: var(--menu-standar-color);
     position: absolute;
     top: 68px;
     left: 0px;
@@ -164,7 +164,7 @@ footer div {
 /* Page Content */
 .main-content {
     padding-top: 65px;
-    background-color: var(--menu-dropdown-color);
+    background-color: var(--main-background-color);
     font-family: 'Comic Neue', cursive;
     min-height: 100vh;
 }
@@ -210,7 +210,7 @@ h1 {
     padding: 3px 15px 5px 0px;
 }
 
-/* reference: https://blog.pope.tech/2020/02/28/missing-form-label-search/ */
+/* reference: Missing Form Label – Site Search example  https://blog.pope.tech/2020/02/28/missing-form-label-search/ */
 .wave-form-lable-fix {
     overflow: hidden;
     left: -99999999px;

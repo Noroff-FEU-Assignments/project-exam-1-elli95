@@ -151,7 +151,6 @@
     .description-ingredients {
         grid-template-areas:
         "b a"  "c c" ;
-        grid-gap: 10%;
     }
 
     /* Contact */
@@ -248,6 +247,7 @@
     .description-ingredients h2,
     .description-ingredients ol {
         font-size: 1.6rem;
+        margin: 40px;
     }
       
     .wp-block-table {

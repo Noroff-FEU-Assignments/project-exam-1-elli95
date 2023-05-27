@@ -81,13 +81,3 @@ function navSymbolChange () {
     }
 }
 navSymbolChange ();
-
-// function selectedNavSymbol() {
-//     carouselNavSymbols1.style.backgroundColor = "var(--carousel-nav-symbols-selected)";
-//     carouselNavSymbols1.style.border = "solid 1px var(--standar-black-color)";
-// }
-
-// function standardNavSymbol() {
-//     carouselNavSymbols1.style.backgroundColor = "var(--carousel-nav-symbols-standard)";
-//     carouselNavSymbols1.style.border = "none";
-// }
