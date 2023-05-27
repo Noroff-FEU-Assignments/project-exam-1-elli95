@@ -51,6 +51,7 @@ export{
     postEndpoint,
     embeddedBase,
     apiUrlPosts,
+    productId,
     getApiFromId,
     emailValidate,
     valueLength,

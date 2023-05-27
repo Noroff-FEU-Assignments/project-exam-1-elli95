@@ -1,6 +1,7 @@
 import {
     emailValidate,
     valueLength,
+    productId,
     getApiFromId } from "/js/source.js";
 
 const pageContent = document.querySelector(".comment-section");
