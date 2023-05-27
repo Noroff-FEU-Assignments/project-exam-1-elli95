@@ -46,7 +46,6 @@
 .date {
     justify-self: end;
     padding-right: 18%;
-    /* width: -webkit-fill-available; */
     width: max-content;
 }
 
