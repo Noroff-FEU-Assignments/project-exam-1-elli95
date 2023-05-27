@@ -14,6 +14,10 @@
         width: auto;
     }
 
+    footer .btn-style {
+        margin-top: unset;
+    }
+
     /* Blog-list */
     .blog-section {
         grid-template-columns: repeat(2, auto);
@@ -338,7 +342,7 @@
     }
 
     .search-list-result {
-        top: 99px;
+        top: 98px;
     }
     
     /* Page Content */
