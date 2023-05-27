@@ -9,6 +9,11 @@
         flex-direction: row;
     }
 
+    footer .submission-success, 
+    footer .submission-fail {
+        width: auto;
+    }
+
     /* Blog-list */
     .blog-section {
         grid-template-columns: repeat(2, auto);
