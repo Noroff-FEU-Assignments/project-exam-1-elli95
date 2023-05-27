@@ -305,7 +305,7 @@
 
 @media (min-width: 1400px) {
     .introduction-text-style {
-        top: 120px;
+        top: 130px;
         width: 610px;
     }
     
@@ -392,7 +392,7 @@
 @media (min-width: 2000px){
     /* index */
     .introduction-text-style {  
-        top: 123px;
+        top: 160px;
         width: 890px;
     }
 
