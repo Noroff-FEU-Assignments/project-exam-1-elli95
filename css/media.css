@@ -270,7 +270,7 @@
 
     .img-box {  
         overflow: hidden;
-        height: 100vh;
+        height: auto;
     }
     
     .img-box img {
@@ -320,6 +320,11 @@
     /* blog list */
     .blog-section {
         grid-template-columns: repeat(4, auto);
+    }
+
+    /* Contact */
+    .img-box {  
+        height: 100vh;
     }
 }
 
