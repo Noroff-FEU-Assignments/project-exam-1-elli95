@@ -17,6 +17,7 @@
         <li><a href="#Installation">Installation</a></li>
       </ul>
     </li>
+    <li><a href="#Contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -63,6 +64,22 @@ git clone https://github.com/Noroff-FEU-Assignments/project-exam-1-elli95
 ```
 
 2. Open the folder with a code editor (ex. visual studio code)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Contributing -->
+## Contributing
+
+Want to contribute to the project?
+Just follow these steps and you are on your way:
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+If you encounters any issues feel free to post a new post on the issues tab.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
